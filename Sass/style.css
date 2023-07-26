@@ -5,19 +5,32 @@ h1, h2, h3, p {
 
 h1 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.063rem;
 }
 
 p {
   font-size: 1rem;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+}
+
+::placeholder {
+  opacity: 1;
 }
 
 body {
@@ -55,6 +68,7 @@ header .header__location .location-search {
   background-color: transparent;
   border: none;
   font-size: 1rem;
+  font-family: "Roboto", sans-serif;
   width: 35%;
 }
 
@@ -63,16 +77,82 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 main .main__present {
+  padding: 3vh 0 4.5vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   text-align: center;
   background-color: #F3F3F3;
+  height: 36vh;
 }
 main .main__present h1 {
   max-width: 73%;
   margin: 0 auto;
 }
-main img {
+main .main__present .main__present-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  height: 4vh;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  color: white;
+}
+main .main__rest {
+  background-color: #F3F3F3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  height: 100%;
+  width: 100vw;
+}
+main .main__rest .main__rest-card {
+  width: calc(100% - 10px);
+  height: 251px;
+  box-sizing: border-box;
+}
+main .main__rest .main__rest-card img {
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 174px;
   width: 100%;
+}
+
+footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 25px 22px 25px;
+  color: white;
+  height: 22vh;
+  gap: 2vh;
+}
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+footer ul li {
+  margin-bottom: 2vh;
+}
+footer ul li .fa-solid {
+  width: 11px;
+  padding-right: 2vw;
+}
+footer h2 {
+  font-family: "Shrikhand", sans-serif;
+}
+footer a {
+  color: white;
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */
