@@ -211,14 +211,39 @@ main .restaurant .restaurant__container .restaurant__card img {
 main .restaurant .restaurant__container .restaurant__card .restaurant__card-content {
   position: absolute;
   top: 174px;
+  left: 13px;
   height: 77px;
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: center;
   gap: 5px;
 }
-
+main .restaurant .restaurant__container .restaurant__card .restaurant__card-content p {
+  font-size: 1.063rem;
+  font-weight: 300;
+}
+main .restaurant .restaurant__container .restaurant__card .restaurant__card-heart {
+  position: relative;
+  top: 197px;
+  left: 293px;
+}
+main .restaurant .restaurant__container .restaurant__card .restaurant__card-heart .restaurant__card-heart--background {
+  position: absolute;
+  width: 22px;
+  height: 21px;
+  background-color: linear-gradient(0deg, #9356DC, #FF79DA);
+  z-index: 10;
+}
+main .restaurant .restaurant__container .restaurant__card .restaurant__card-heart i {
+  position: absolute;
+  font-size: 1.313rem;
+}
+main .restaurant .restaurant__container .restaurant__card .restaurant__card-heart .fa-solid {
+  opacity: 0;
+  overflow: hidden;
+}
 footer {
   background-color: #353535;
   display: flex;
