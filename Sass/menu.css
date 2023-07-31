@@ -1,0 +1,9 @@
+.header__title .a {
+  position: relative;
+}
+.header__title .a .fa-solid {
+  position: absolute;
+  top: 50px;
+  left: 17px;
+  color: red;
+}/*# sourceMappingURL=menu.css.map */
