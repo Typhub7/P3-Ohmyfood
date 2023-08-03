@@ -1,10 +1,11 @@
 body {
     font-family: 'Roboto', sans-serif;
     display: flex;
-    width: 100vw;
+    align-items: center;
+    width: 100%;
     max-width: 1440px;
     flex-direction: column;
-    margin : 0;
+    margin : auto;
 }
 
 .mainheader {
@@ -13,6 +14,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 113px;
+    width : 100vw;
     .mainheader__title {
         display: flex;
         flex-direction: column;
@@ -21,12 +23,14 @@ body {
         height: 89px;
         width: 45%;
         img {
+            max-height: 36px;
             max-width: 100%;
+            object-fit: cover;
         }
     }
     .mainheader__location {
         display: flex;
-        width: 100%;
+        width: 100vw;
         height: 50px;
         justify-content: center;
         align-items: center;
@@ -34,12 +38,12 @@ body {
         flex-shrink: 0;
         box-shadow: inset 0px 8px 8px -5px rgba(0, 0, 0, 0.25);
         background-color: $medium-grey;
+        padding-left: 75px;
         .location-search {
             background-color: transparent;
             border: none;
             font-size: 1rem;
             font-family: 'Roboto', sans-serif;
-            width: 35%;
         }
     }
 }
@@ -122,27 +126,34 @@ main {
         background-color: $light-grey;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 2vh;
-        width : 100%;
+        width : 100vw;
         max-width: 100vw;
-        padding: 3rem 1rem;
+        padding: 3rem 0 3rem 0;
 
-        .restaurant__title {
-            margin-left : 2rem;
+
+        &__title {
+            width: 322px;
+            align-self: flex-start;
+            margin : 0 auto;
         }
 
-        .restaurant__container {
+        &__container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         gap: 2vh;
-        width : 100%;
-        
+        /*@media (min-width: 1024px) {
+            flex-wrap: wrap;
+        }*/
+                
             .restaurant__card {
             display: flex;
             flex-direction: column;
-            width: 340px;
+            width: 90vw; 
+            max-width : 510px; 
             height: 251px;
             overflow: hidden;
             position: relative;
@@ -150,8 +161,8 @@ main {
             border-top-right-radius: 20px;
             background: #FFF; 
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
- 
-                .restaurant__card-new {
+             
+                &-new {
                     position: absolute;
                     top: 1rem;
                     right: 1rem;
@@ -174,7 +185,7 @@ main {
                 top : -57px;
                 object-fit: cover;
                 height: 231px;
-                width: 346px;
+                width: 100% /*346px*/
                 }
 
                 .restaurant__card-content {
@@ -224,37 +235,47 @@ main {
 }
 
 footer {
-    background-color: $grey-footer;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 22px 25px 22px 25px;
+    justify-content: center;
+    background-color: $grey-footer;
     color: $white-text;
-    height: 22vh;
-    gap: 2vh;
-    ul{ 
-        padding : 0;
-        margin : 0;
-        list-style-type: none;
-        li {
-            margin-bottom: 2vh;
-            .fa-solid {
-                width: 11px;
-                padding-right: 2vw;
-                
-                ;
+    width : 100%;
+    max-width: 100vw;
+    
+    &__container{
+        width: 322px;
+        padding: 22px 25px 22px 25px;
+        gap : 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
 
+        ul{ 
+            padding : 0;
+            margin : 0;
+            list-style-type: none;
+            li {
+                margin-bottom: 2vh;
+                .fa-solid {
+                    width: 11px;
+                    padding-right: 2vw;
+                    
+                    ;
+    
+                }
             }
         }
-    }
-
-    h2 {
-        font-family: 'Shrikhand', sans-serif;
+    
+        h2 {
+            font-family: 'Shrikhand', sans-serif;
+        }
+        
+        a {
+            color : $white-text;
+            font-size: 1rem;
+        }
     }
     
-    a {
-        color : $white-text;
-        font-size: 1rem;
-    }
 
 }
