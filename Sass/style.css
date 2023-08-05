@@ -96,7 +96,18 @@ main .howto {
   main .howto {
     justify-content: center;
     flex-direction: row;
-    gap: 30px;
+    align-items: flex-end;
+    gap: 24px;
+    height: 130px;
+    padding: 50px 180px;
+    margin: 0;
+    position: relative;
+    left: -100px;
+  }
+  main .howto__title {
+    position: relative;
+    left: 200px;
+    bottom: 95px;
   }
 }
 main .howto .howto__content {
