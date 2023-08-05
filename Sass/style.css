@@ -108,21 +108,22 @@ main .presentation h1 {
   margin: 0 auto;
 }
 main .presentation .presentation__btn {
+  position: relative;
   display: flex;
   align-items: center;
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
-  height: 4vh;
+  height: 50px;
   max-width: 60%;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 0 20px;
   color: white;
-  transition: 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 main .presentation .presentation__btn:hover, main .presentation .presentation__btn:active {
-  background: linear-gradient(175deg, #ffa2e5 0%, #a978e3 100%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(175deg, #ff88de 0%, #9b63df 100%);
+  box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.4);
 }
 main .presentation .presentation__btn:not(:hover):not(:active) {
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
@@ -475,11 +476,11 @@ main .menu .menu__btn {
   padding: 10px 20px;
   margin: auto;
   color: white;
-  transition: 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 main .menu .menu__btn:hover, main .menu .menu__btn:active {
-  background: linear-gradient(175deg, #ffa2e5 0%, #a978e3 100%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(175deg, #ff88de 0%, #9b63df 100%);
+  box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.4);
 }
 main .menu .menu__btn:not(:hover):not(:active) {
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
