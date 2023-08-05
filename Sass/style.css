@@ -118,6 +118,11 @@ main .presentation .presentation__btn {
   margin: 0 auto;
   padding: 10px 20px;
   color: white;
+  transition: 0.3s ease-in-out;
+}
+main .presentation .presentation__btn:hover, main .presentation .presentation__btn:active {
+  background: linear-gradient(175deg, #ffa2e5 0%, #a978e3 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
 }
 main .howto {
   display: flex;
@@ -466,4 +471,9 @@ main .menu .menu__btn {
   padding: 10px 20px;
   margin: auto;
   color: white;
+  transition: 0.3s ease-in-out;
+}
+main .menu .menu__btn:hover, main .menu .menu__btn:active {
+  background: linear-gradient(175deg, #ffa2e5 0%, #a978e3 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=style.css.map */
