@@ -1,6 +1,41 @@
 /**background**/
 /** #353535**/
 /** #7E7E7E **/
+h1, h2, h3, h4, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.063rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+}
+
+::placeholder {
+  opacity: 1;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -255,14 +290,14 @@ main .restaurant__container .restaurant__card .restaurant__card-heart .fa-regula
   opacity: 0;
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: center;
   background-color: #353535;
   color: white;
   width: 100%;
 }
-footer .footer__container {
+.footer .footer__container {
   width: 322px;
   padding: 22px 25px 22px 25px;
   gap: 16px;
@@ -272,7 +307,7 @@ footer .footer__container {
   align-items: flex-start;
 }
 @media (min-width: 1024px) {
-  footer .footer__container {
+  .footer .footer__container {
     width: 1440px;
     flex-direction: row-reverse;
     align-items: flex-end;
@@ -281,40 +316,40 @@ footer .footer__container {
     padding: 30px 25px 30px 25px;
   }
 }
-footer .footer__container ul {
+.footer .footer__container ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 @media (min-width: 1024px) {
-  footer .footer__container ul {
+  .footer .footer__container ul {
     display: flex;
     flex-direction: row;
     gap: 10px;
   }
 }
-footer .footer__container ul li {
+.footer .footer__container ul li {
   margin-bottom: 2vh;
 }
 @media (min-width: 1024px) {
-  footer .footer__container ul li {
+  .footer .footer__container ul li {
     margin-bottom: 0;
     width: 200px;
   }
 }
-footer .footer__container ul li .fa-solid {
+.footer .footer__container ul li .fa-solid {
   width: 11px;
   padding-right: 2vw;
 }
 @media (min-width: 1024px) {
-  footer .footer__container ul li .fa-solid {
+  .footer .footer__container ul li .fa-solid {
     padding-right: 11px;
   }
 }
-footer .footer__container h2 {
+.footer .footer__container h2 {
   font-family: "Shrikhand", sans-serif;
 }
-footer .footer__container a {
+.footer .footer__container a {
   color: white;
   font-size: 1rem;
 }
@@ -431,39 +466,4 @@ main .menu .menu__btn {
   padding: 10px 20px;
   margin: auto;
   color: white;
-}
-
-h1, h2, h3, h4, p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 1.1rem;
-  font-weight: 300;
-}
-
-h3 {
-  font-size: 1.063rem;
-}
-
-p {
-  font-size: 1rem;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-::-moz-placeholder {
-  opacity: 1;
-}
-
-::placeholder {
-  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
