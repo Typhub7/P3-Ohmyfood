@@ -279,10 +279,17 @@ main .restaurant__container .restaurant__card .restaurant__card-content p {
 main .restaurant__container .restaurant__heart {
   position: relative;
   bottom: 77px;
-  left: 200px;
+  left: 40%;
   width: 24px;
   height: 23px;
   font-size: 22px;
+}
+@media (min-width: 1024px) {
+  main .restaurant__container .restaurant__heart {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
 }
 main .restaurant__container .restaurant__heart .hide-checkbox {
   display: none;
