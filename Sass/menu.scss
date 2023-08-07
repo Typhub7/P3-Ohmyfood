@@ -27,6 +27,17 @@
     }
 }
 
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    transform: translateY(10px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
 main {
     img {
         height: 275px;
@@ -47,9 +58,71 @@ main {
 
         .menu__title{
             font-family: "Shrikhand", sans-serif;
-            .menu_title-h1{
+            height: 27px;
+            .menu__title-h1{
                 font-size: 28px;          
-                font-weight: 400; 
+                font-weight: 400;
+            }
+            .menu__title-heart {
+                position: relative;
+                top: -36px;
+                left: 91%;
+                width: 24px;
+                height: 23px;
+                font-size: 22px;
+                @media (min-width: 1024px) {
+                    bottom: 58%;
+                    left: 97%;
+                }
+
+                .hide-checkbox {
+                display: none;
+                margin: 0;
+                z-index: 10;
+                }
+
+                i {
+                    position: absolute;
+                    left: -5px;
+                    top: 5px;
+                }
+                .heart-full-1 {
+                    font-size: 24px;
+                    color: transparent;
+                    background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+                    -webkit-background-clip: text;
+                    overflow: hidden;
+                    opacity : 0;
+                    cursor: pointer;
+                    scale : 0.1;
+                    transition: all 0.3s ease-in-out;                  
+                }
+                .heart-empty-1 {
+                    color:black;
+                    opacity: 1;
+                    scale : 1;
+                    transition: all 0.3s ease-in-out;                            
+                }
+                
+                #heart-checkbox-1:checked ~ .heart-label .heart-full-1 {
+                    opacity: 1;
+                    scale : 1;
+                }
+            
+                #heart-checkbox-1:checked ~ .heart-label .heart-empty-1  {
+                    opacity: 0;
+                    scale : 0.1;
+                }
+
+                #heart-checkbox-1:not(checked) ~ .heart-label .heart-full-1 {
+                    opacity: 0;
+                    scale : 0.1;
+                }
+            
+                #heart-checkbox-1:not(checked) ~ .heart-label .heart-empty-1 {
+                    opacity: 1;
+                    scale : 1;
+                }
             }
         }
 
@@ -70,7 +143,9 @@ main {
                     height: 3px;
                     background-color: $light-green-color;
                 }
+
             }
+
             .menu_card {
                 background-color: white;
                 box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
@@ -80,7 +155,23 @@ main {
                 border-radius: 15px;
                 height: 42px;
                 overflow: hidden;
-                padding: 15px; 
+                padding: 15px;
+                opacity: 0;
+                animation: fadeIn 0.6s ease-in-out forwards;
+                        
+                &:nth-of-type(1) {
+                    animation-delay: 0.2s;
+                }
+                
+                &:nth-of-type(2) {
+                    animation-delay: 0.4s;
+                }
+                
+                &:nth-of-type(3){
+                    animation-delay: 0.6s;
+                }
+
+
                 .menu_card-h2 {
                     font-weight: 500;
                     margin-bottom: 5px;
@@ -100,9 +191,12 @@ main {
                     line-height: normal; 
 
                 }
+                &:hover {
+                    
+                }
             }
+
             
-          
         }
 
     .menu__btn {
@@ -134,3 +228,4 @@ main {
 
     }
 }
+
