@@ -230,8 +230,9 @@ main .restaurant__container .restaurant__card {
   height: 251px;
   overflow: hidden;
   position: relative;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  /*border-top-left-radius: 20px;
+  border-top-right-radius: 20px;*/
+  border-radius: 20px;
   background: #FFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
@@ -278,18 +279,11 @@ main .restaurant__container .restaurant__card .restaurant__card-content p {
 }
 main .restaurant__container .restaurant__heart {
   position: relative;
-  bottom: 77px;
-  left: 40%;
+  top: 77%;
+  left: 86%;
   width: 24px;
   height: 23px;
   font-size: 22px;
-}
-@media (min-width: 1024px) {
-  main .restaurant__container .restaurant__heart {
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
 }
 main .restaurant__container .restaurant__heart .hide-checkbox {
   display: none;
@@ -319,6 +313,7 @@ main .restaurant__container .restaurant__heart .heart-empty-1,
 main .restaurant__container .restaurant__heart .heart-empty-2,
 main .restaurant__container .restaurant__heart .heart-empty-3,
 main .restaurant__container .restaurant__heart .heart-empty-4 {
+  color: black;
   opacity: 1;
   scale: 1;
   transition: all 0.3s ease-in-out;
