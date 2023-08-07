@@ -280,34 +280,69 @@ main .restaurant__container .restaurant__heart {
   position: relative;
   bottom: 77px;
   left: 200px;
-  width: 23px;
-  height: 21px;
+  width: 24px;
+  height: 23px;
   font-size: 22px;
-  z-index: 5;
 }
 main .restaurant__container .restaurant__heart .hide-checkbox {
+  display: none;
   margin: 0;
-  opacity: 0;
+  z-index: 10;
 }
-main .restaurant__container .restaurant__heart .fa-solid {
+main .restaurant__container .restaurant__heart i {
   position: absolute;
   left: -5px;
-  top: 4.5px;
+  top: 5px;
+}
+main .restaurant__container .restaurant__heart .heart-full-1,
+main .restaurant__container .restaurant__heart .heart-full-2,
+main .restaurant__container .restaurant__heart .heart-full-3,
+main .restaurant__container .restaurant__heart .heart-full-4 {
   font-size: 24px;
   color: transparent;
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   overflow: hidden;
-  opacity: 1;
-  z-index: 1;
+  opacity: 0;
   cursor: pointer;
+  scale: 0.1;
+  transition: all 0.3s ease-in-out;
 }
-main .restaurant__container .restaurant__heart .fa-regular {
-  position: absolute;
-  left: -5px;
-  top: 5px;
+main .restaurant__container .restaurant__heart .heart-empty-1,
+main .restaurant__container .restaurant__heart .heart-empty-2,
+main .restaurant__container .restaurant__heart .heart-empty-3,
+main .restaurant__container .restaurant__heart .heart-empty-4 {
   opacity: 1;
-  z-index: 0;
+  scale: 1;
+  transition: all 0.3s ease-in-out;
+}
+main .restaurant__container .restaurant__heart #heart-checkbox-1:checked ~ .heart-label .heart-full-1,
+main .restaurant__container .restaurant__heart #heart-checkbox-2:checked ~ .heart-label .heart-full-2,
+main .restaurant__container .restaurant__heart #heart-checkbox-3:checked ~ .heart-label .heart-full-3,
+main .restaurant__container .restaurant__heart #heart-checkbox-4:checked ~ .heart-label .heart-full-4 {
+  opacity: 1;
+  scale: 1;
+}
+main .restaurant__container .restaurant__heart #heart-checkbox-1:checked ~ .heart-label .heart-empty-1,
+main .restaurant__container .restaurant__heart #heart-checkbox-2:checked ~ .heart-label .heart-empty-2,
+main .restaurant__container .restaurant__heart #heart-checkbox-3:checked ~ .heart-label .heart-empty-3,
+main .restaurant__container .restaurant__heart #heart-checkbox-4:checked ~ .heart-label .heart-empty-4 {
+  opacity: 0;
+  scale: 0.1;
+}
+main .restaurant__container .restaurant__heart #heart-checkbox-1:not(checked) ~ .heart-label .heart-full-1,
+main .restaurant__container .restaurant__heart #heart-checkbox-2:not(checked) ~ .heart-label .heart-full-2,
+main .restaurant__container .restaurant__heart #heart-checkbox-3:not(checked) ~ .heart-label .heart-full-3,
+main .restaurant__container .restaurant__heart #heart-checkbox-4:not(checked) ~ .heart-label .heart-full-4 {
+  opacity: 0;
+  scale: 0.1;
+}
+main .restaurant__container .restaurant__heart #heart-checkbox-1:not(checked) ~ .heart-label .heart-empty-1,
+main .restaurant__container .restaurant__heart #heart-checkbox-2:not(checked) ~ .heart-label .heart-empty-2,
+main .restaurant__container .restaurant__heart #heart-checkbox-3:not(checked) ~ .heart-label .heart-empty-3,
+main .restaurant__container .restaurant__heart #heart-checkbox-4:not(checked) ~ .heart-label .heart-empty-4 {
+  opacity: 1;
+  scale: 1;
 }
 
 .footer {
