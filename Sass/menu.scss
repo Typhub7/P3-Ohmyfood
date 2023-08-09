@@ -1,11 +1,9 @@
 .restauheader {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+    @include flex(row,center,flex-start);
     position: relative;
     width: 100vw;
     height: 63px;
+
 
     a{
         position: absolute;
@@ -23,18 +21,6 @@
         height: 36px;
         max-width: 45%;
         object-fit: contain;
-        
-    }
-}
-
-@keyframes fadeIn {
-    from {
-    opacity: 0;
-    transform: translateY(10px);
-    }
-    to {
-    opacity: 1;
-    transform: translateY(0);
     }
 }
 
@@ -52,8 +38,7 @@ main {
         padding: 36px 5% 40px 5%;
         background-color: $light-grey;
         border-radius: 40px 40px 0 0;
-        display: flex;
-        flex-direction: column;
+        @include flex(column);
         gap : 40px;
 
         .menu__title{
@@ -76,11 +61,8 @@ main {
                 }
 
                 .hide-checkbox {
-                display: none;
-                margin: 0;
-                z-index: 10;
+                    @include hide;
                 }
-
                 i {
                     position: absolute;
                     left: -5px;
@@ -91,44 +73,34 @@ main {
                     color: transparent;
                     background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
                     -webkit-background-clip: text;
+                    background-clip :text;
                     overflow: hidden;
-                    opacity : 0;
+                    @include Opacity-and-Scale (0,0.1);
                     cursor: pointer;
-                    scale : 0.1;
                     transition: all 0.3s ease-in-out;                  
                 }
                 .heart-empty-1 {
                     color:black;
-                    opacity: 1;
-                    scale : 1;
+                    @include Opacity-and-Scale (1,1);
                     transition: all 0.3s ease-in-out;                            
                 }
-                
                 #heart-checkbox-1:checked ~ .heart-label .heart-full-1 {
-                    opacity: 1;
-                    scale : 1;
+                    @include Opacity-and-Scale (1,1);
                 }
-            
                 #heart-checkbox-1:checked ~ .heart-label .heart-empty-1  {
-                    opacity: 0;
-                    scale : 0.1;
+                    @include Opacity-and-Scale (0,0.1);
                 }
-
                 #heart-checkbox-1:not(checked) ~ .heart-label .heart-full-1 {
-                    opacity: 0;
-                    scale : 0.1;
+                    @include Opacity-and-Scale (0,0.1);
                 }
-            
                 #heart-checkbox-1:not(checked) ~ .heart-label .heart-empty-1 {
-                    opacity: 1;
-                    scale : 1;
+                    @include Opacity-and-Scale (1,1);
                 }
             }
         }
 
         .menu__starter, .menu__dish, .menu__dessert {
-            display: flex;
-            flex-direction: column;
+            @include flex(column);
             gap: 12px;
             .menu_card-h4{
                 font-weight: 300;
@@ -143,15 +115,12 @@ main {
                     height: 3px;
                     background-color: $light-green-color;
                 }
-
             }
 
             .menu_card {
                 background-color: white;
                 box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+                @include flex(row, stretch ,space-between);
                 border-radius: 15px;
                 height: 42px;
                 overflow: hidden;
@@ -171,7 +140,6 @@ main {
                     animation-delay: 0.6s;
                 }
 
-
                 .menu_card-h2 {
                     font-weight: 500;
                     margin-bottom: 5px;
@@ -189,43 +157,43 @@ main {
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal; 
-
                 }
-                &:hover {
-                    
-                }
-            }
-
-            
+            }           
         }
 
-    .menu__btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
-        border-radius: 25px;
-        height: 30px;
-        width: 146px;
-        padding : 10px 20px ;
-        margin : auto;
-        color: $white-text;
-        transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        
-        &:hover, &:active {
-            background: linear-gradient(175deg, lighten(#FF79DA,3%) 0%, lighten(#9356DC,3%) 100%); 
-            box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.4);
-            
-        }
-        &:not(:hover):not(:active) {
+        .menu__btn {
+            @include flex(row,center,center);
             background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
-            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-        }
-    }
-           
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
+            border-radius: 25px;
+            height: 30px;
+            width: 146px;
+            padding : 10px 20px ;
+            margin : auto;
+            color: $white-text;
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             
+            &:hover, &:active {
+                background: linear-gradient(175deg, lighten(#FF79DA,3%) 0%, lighten(#9356DC,3%) 100%); 
+                box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.4);
+                
+            }
+            &:not(:hover):not(:active) {
+                background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+            }
+        } 
+    }
+}
 
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    transform: translateY(10px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
     }
 }
 
