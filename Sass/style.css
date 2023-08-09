@@ -220,7 +220,7 @@ main .restaurant {
   padding: 3rem 0 3rem 0;
 }
 main .restaurant__title {
-  width: 90vw; /*322px*/
+  width: 90vw;
   padding-left: 5vw;
   max-width: 510px;
   align-self: flex-start;
@@ -334,6 +334,7 @@ main .restaurant__container .restaurant__heart .heart-full-4 {
   color: transparent;
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   overflow: hidden;
   cursor: pointer;
   opacity: 0;
@@ -540,8 +541,8 @@ main .menu .menu__title .menu__title-heart .heart-full-1 {
   background-clip: text;
   overflow: hidden;
   opacity: 0;
-  cursor: pointer;
   scale: 0.1;
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 main .menu .menu__title .menu__title-heart .heart-empty-1 {
@@ -589,16 +590,11 @@ main .menu .menu__starter .menu_card-h4::before, main .menu .menu__dish .menu_ca
   background-color: #99e2d0;
 }
 main .menu .menu__starter .menu_card, main .menu .menu__dish .menu_card, main .menu .menu__dessert .menu_card {
+  position: relative;
   background-color: white;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: space-between;
-  flex-wrap: nowrap;
   border-radius: 15px;
   height: 42px;
-  overflow: hidden;
   padding: 15px;
   opacity: 0;
   animation: fadeIn 0.6s ease-in-out forwards;
@@ -612,23 +608,87 @@ main .menu .menu__starter .menu_card:nth-of-type(2), main .menu .menu__dish .men
 main .menu .menu__starter .menu_card:nth-of-type(3), main .menu .menu__dish .menu_card:nth-of-type(3), main .menu .menu__dessert .menu_card:nth-of-type(3) {
   animation-delay: 0.6s;
 }
-main .menu .menu__starter .menu_card .menu_card-h2, main .menu .menu__dish .menu_card .menu_card-h2, main .menu .menu__dessert .menu_card .menu_card-h2 {
+main .menu .menu__starter .menu_card .menu_card-width, main .menu .menu__dish .menu_card .menu_card-width, main .menu .menu__dessert .menu_card .menu_card-width {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 80%;
+}
+main .menu .menu__starter .menu_card .menu_card-width .menu_card-content, main .menu .menu__dish .menu_card .menu_card-width .menu_card-content, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-content {
+  width: 90%;
+}
+main .menu .menu__starter .menu_card .menu_card-width .menu_card-content .menu_card-h2, main .menu .menu__dish .menu_card .menu_card-width .menu_card-content .menu_card-h2, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-content .menu_card-h2 {
   font-weight: 500;
   margin-bottom: 5px;
+  white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
-main .menu .menu__starter .menu_card .menu_card-p, main .menu .menu__dish .menu_card .menu_card-p, main .menu .menu__dessert .menu_card .menu_card-p {
-  font-size: 15.043px;
+main .menu .menu__starter .menu_card .menu_card-width .menu_card-content .menu_card-p, main .menu .menu__dish .menu_card .menu_card-width .menu_card-content .menu_card-p, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-content .menu_card-p {
+  font-size: 15px;
   font-weight: 300;
+  white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
-main .menu .menu__starter .menu_card .menu_card-price, main .menu .menu__dish .menu_card .menu_card-price, main .menu .menu__dessert .menu_card .menu_card-price {
+main .menu .menu__starter .menu_card .menu_card-width .menu_card-price, main .menu .menu__dish .menu_card .menu_card-width .menu_card-price, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-price {
   display: flex;
+  flex-direction: row;
   align-items: flex-end;
-  font-size: 15.043px;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  font-size: 15px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  width: 10%;
+}
+main .menu .menu__starter .menu_card .hide-checkbox, main .menu .menu__dish .menu_card .hide-checkbox, main .menu .menu__dessert .menu_card .hide-checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90vw;
+  height: 72px;
+  border-radius: 15px;
+  opacity: 0;
+}
+main .menu .menu__starter .menu_card .green-back, main .menu .menu__dish .menu_card .green-back, main .menu .menu__dessert .menu_card .green-back {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 72px;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+}
+main .menu .menu__starter .menu_card .green-back .fa-regular, main .menu .menu__dish .menu_card .green-back .fa-regular, main .menu .menu__dessert .menu_card .green-back .fa-regular {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  color: white;
+  font-size: 24px;
+  height: 72px;
+}
+main .menu .menu__starter .menu_card .hide-checkbox:checked ~ .green-back, main .menu .menu__dish .menu_card .hide-checkbox:checked ~ .green-back, main .menu .menu__dessert .menu_card .hide-checkbox:checked ~ .green-back {
+  width: 20%;
+  min-width: 60px;
+  transition: width 0.2s ease-in-out;
+}
+main .menu .menu__starter .menu_card .hide-checkbox:not(checked) ~ .green-back, main .menu .menu__dish .menu_card .hide-checkbox:not(checked) ~ .green-back, main .menu .menu__dessert .menu_card .hide-checkbox:not(checked) ~ .green-back {
+  width: 0;
+  transition: width 0.2s ease-in-out;
+}
+main .menu .menu__starter .menu_card .hide-checkbox:checked ~ .menu_card-width, main .menu .menu__dish .menu_card .hide-checkbox:checked ~ .menu_card-width, main .menu .menu__dessert .menu_card .hide-checkbox:checked ~ .menu_card-width {
+  width: 80%;
+  transition: width 0.2s ease-in-out;
+}
+main .menu .menu__starter .menu_card .hide-checkbox:not(checked) ~ .menu_card-width, main .menu .menu__dish .menu_card .hide-checkbox:not(checked) ~ .menu_card-width, main .menu .menu__dessert .menu_card .hide-checkbox:not(checked) ~ .menu_card-width {
+  width: 100%;
+  transition: width 0.2s ease-in-out;
 }
 main .menu .menu__btn {
   display: flex;
