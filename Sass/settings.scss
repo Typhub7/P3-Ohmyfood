@@ -42,3 +42,29 @@ a:link {
 ::placeholder {
     opacity: 1; 
 }
+
+//** mixin **/
+
+@mixin flex(
+  $flex-direction: row,
+  $align-items: stretch,
+  $justify-content: flex-start,
+  $flex-wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin hide {
+    display: none;
+    margin: 0;
+    z-index: 10;
+    }
+
+@mixin Opacity-and-Scale ($opacity, $scale) {
+    opacity: $opacity;
+    scale : $scale;
+}

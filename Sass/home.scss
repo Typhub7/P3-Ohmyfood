@@ -1,24 +1,16 @@
 body {
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    align-items: center;
+    @include flex (column,center);
     width: 100%;
-    flex-direction: column;
     margin : auto;
 }
 
 .mainheader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    @include flex (column,center,space-between);
     height: 113px;
     width : 100vw;
     .mainheader__title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex (column,center,center);
         height: 89px;
         width: 45%;
         img {
@@ -28,11 +20,9 @@ body {
         }
     }
     .mainheader__location {
-        display: flex;
+        @include flex (row,center,center);
         width: 100vw;
         height: 50px;
-        justify-content: center;
-        align-items: center;
         gap: 17px;
         flex-shrink: 0;
         box-shadow: inset 0px 8px 8px -5px rgba(0, 0, 0, 0.25);
@@ -49,15 +39,10 @@ body {
 
 main {
     width: 100%;
-    display : flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    @include flex (column,center,space-between);
     .presentation {
         padding : 3vh 0 4.5vh 0;
-        display : flex;
-        flex-direction: column;
-        justify-content: space-around;
+        @include flex (column,stretch,space-around);
         text-align: center;
         background-color: $light-grey;
         height: 36vh;
@@ -68,42 +53,37 @@ main {
             margin : 0 auto;
         }
         .presentation__btn {
-        position: relative;
-        display: flex;
-        align-items: center;
-        background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
-        border-radius: 25px;
-        height: 50px;
-        max-width: 60%;
-        margin : 0 auto;
-        padding : 0 20px;
-        color: $white-text;
-        transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        
-        &:hover, &:active {
-            background: linear-gradient(175deg, lighten(#FF79DA,3%) 0%, lighten(#9356DC,3%) 100%); 
-            box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.4);
-            
-        }
-        &:not(:hover):not(:active) {
+            position: relative;
+            @include flex (row,center);
             background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
-            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-        }
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
+            border-radius: 25px;
+            height: 50px;
+            max-width: 60%;
+            margin : 0 auto;
+            padding : 0 20px;
+            color: $white-text;
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        
+            &:hover, &:active {
+                background: linear-gradient(175deg, lighten(#FF79DA,3%) 0%, lighten(#9356DC,3%) 100%); 
+                box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.4);
+                
+            }
+            &:not(:hover):not(:active) {
+                background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+            }
         }
     }
 
     .howto {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        @include flex (column,stretch,space-around);
         height: 440px;
         margin-top: 20px;
         margin-bottom: 20px;
         @media (min-width: 1024px) {
-            justify-content: center;
-            flex-direction: row;
-            align-items: flex-end;
+            @include flex (row,flex-end,center);
             gap : 24px;
             height: 130px;
             padding: 50px 180px;
@@ -118,10 +98,8 @@ main {
             }
         }
 
-
         .howto__content {
-            display: flex;
-            align-items: center;
+            @include flex (row,center);
             position : relative;
             padding-left : 73px;
             height: 72px;
@@ -138,25 +116,21 @@ main {
                 color: $grey-fasolid;     
             }
             .howto__circle {
+                @include flex (row,center,center);  
                 position: absolute;
                 left : -14px;
                 border-radius: 100%;
                 background-color: $purple-color;
                 color: $white-text;
                 width: 25px;
-                height: 25px;
-                display: flex;
-                align-items: center;
-                justify-content: center;     
+                height: 25px;       
             }
         }
     }
     
     .restaurant {
         background-color: $light-grey;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex (column,center);
         gap: 2vh;
         width : 100vw;
         max-width: 100vw;
@@ -164,7 +138,7 @@ main {
 
 
         &__title {
-            width: 90vw; /*322px*/
+            width: 90vw; 
             padding-left : 5vw;
             max-width : 510px; 
             align-self: flex-start;
@@ -175,36 +149,29 @@ main {
         }
 
         &__container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
+            @include flex (column,center,space-around);
             gap: 2vh;
             @media (min-width: 1024px) {
-                flex-direction: row;
-                flex-wrap: wrap;
+                @include flex (row,center,space-around,wrap);
                 max-width: 1040px;
             }
                 
             .restaurant__card {
-            display: flex;
-            flex-direction: column;
-            width: 90vw; 
-            max-width : 490px; 
-            height: 251px;
-            overflow: hidden;
-            position: relative;
-            border-radius : 20px;
-            background: #FFF; 
-            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-             
+                @include flex (column); 
+                width: 90vw; 
+                max-width : 490px; 
+                height: 251px;
+                overflow: hidden;
+                position: relative;
+                border-radius : 20px;
+                background: #FFF; 
+                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+                
                 &-new {
+                    @include flex (row,center,center);
                     position: absolute;
                     top: 1rem;
                     right: 1rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
                     z-index: 1;
                     width: 80px;
                     height: 29px;
@@ -217,23 +184,20 @@ main {
                 }
 
                 img {
-                position : absolute;
-                top : -57px;
-                object-fit: cover;
-                height: 231px;
-                width: 100% 
+                    position : absolute;
+                    top : -57px;
+                    object-fit: cover;
+                    height: 231px;
+                    width: 100% 
                 }
 
                 .restaurant__card-content {
+                    @include flex (column,flex-start,center);
                     position: absolute;
                     top: 174px;
                     left: 13px;
                     height: 77px;
                     color: black;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: center;
                     gap: 5px;
                     p {
                         font-size: 1.063rem;
@@ -250,11 +214,8 @@ main {
                 height: 23px;
                 font-size: 22px;
 
-
                 .hide-checkbox {
-                display: none;
-                margin: 0;
-                z-index: 10;
+                @include hide
                 }
 
                 i {
@@ -271,10 +232,10 @@ main {
                     color: transparent;
                     background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
                     -webkit-background-clip: text;
+                    background-clip: text ;
                     overflow: hidden;
-                    opacity : 0;
                     cursor: pointer;
-                    scale : 0.1;
+                    @include Opacity-and-Scale (0,0.1);
                     transition: all 0.3s ease-in-out;                  
                 }
                 .heart-empty-1, 
@@ -282,8 +243,7 @@ main {
                 .heart-empty-3, 
                 .heart-empty-4 {
                     color:black;
-                    opacity: 1;
-                    scale : 1;
+                    @include Opacity-and-Scale (1,1);
                     transition: all 0.3s ease-in-out;                            
                 }
                 
@@ -291,46 +251,36 @@ main {
                 #heart-checkbox-2:checked ~ .heart-label .heart-full-2,
                 #heart-checkbox-3:checked ~ .heart-label .heart-full-3,
                 #heart-checkbox-4:checked ~ .heart-label .heart-full-4 {
-                    opacity: 1;
-                    scale : 1;
+                    @include Opacity-and-Scale (1,1);
                 }
             
                 #heart-checkbox-1:checked ~ .heart-label .heart-empty-1,
                 #heart-checkbox-2:checked ~ .heart-label .heart-empty-2,
                 #heart-checkbox-3:checked ~ .heart-label .heart-empty-3,
                 #heart-checkbox-4:checked ~ .heart-label .heart-empty-4 {
-                    opacity: 0;
-                    scale : 0.1;
+                    @include Opacity-and-Scale (0,0.1);
                 }
 
                 #heart-checkbox-1:not(checked) ~ .heart-label .heart-full-1,
                 #heart-checkbox-2:not(checked) ~ .heart-label .heart-full-2,
                 #heart-checkbox-3:not(checked) ~ .heart-label .heart-full-3,
                 #heart-checkbox-4:not(checked) ~ .heart-label .heart-full-4 {
-                    opacity: 0;
-                    scale : 0.1;
+                    @include Opacity-and-Scale (0,0.1);
                 }
             
                 #heart-checkbox-1:not(checked) ~ .heart-label .heart-empty-1,
                 #heart-checkbox-2:not(checked) ~ .heart-label .heart-empty-2,
                 #heart-checkbox-3:not(checked) ~ .heart-label .heart-empty-3,
                 #heart-checkbox-4:not(checked) ~ .heart-label .heart-empty-4{
-                    opacity: 1;
-                    scale : 1;
-                }
-
-
-            
+                    @include Opacity-and-Scale (1,1);
+                }            
             }
-        
         }
-
     }
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
+    @include flex (row,stretch,center);
     background-color: $grey-footer;
     color: $white-text;
     width : 100%;
@@ -339,23 +289,17 @@ main {
         width: 322px;
         padding: 22px 25px 22px 25px;
         gap : 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
+        @include flex (column,flex-start,space-between);
         @media (min-width: 1024px) {
             width: 1440px;
-            flex-direction: row-reverse;
-            align-items: flex-end;
-            justify-content: flex-start;
+            @include flex (row-reverse,flex-end,flex-start);
             height: 54px;
             padding: 30px 25px 30px 25px;
         }
 
         ul{ 
             @media (min-width: 1024px) {
-                display: flex;
-                flex-direction: row;
+                @include flex (row);
                 gap : 10px;
             }
             padding : 0;
@@ -372,9 +316,7 @@ main {
                     padding-right: 2vw;
                     @media (min-width: 1024px) {
                     padding-right : 11px;
-                    }
-                    
-    
+                    }   
                 }
             }
         }
