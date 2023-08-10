@@ -617,7 +617,7 @@ main .menu .menu__starter .menu_card .menu_card-width, main .menu .menu__dish .m
   width: 80%;
 }
 main .menu .menu__starter .menu_card .menu_card-width .menu_card-content, main .menu .menu__dish .menu_card .menu_card-width .menu_card-content, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-content {
-  width: 90%;
+  width: 88%;
 }
 main .menu .menu__starter .menu_card .menu_card-width .menu_card-content .menu_card-h2, main .menu .menu__dish .menu_card .menu_card-width .menu_card-content .menu_card-h2, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-content .menu_card-h2 {
   font-weight: 500;
@@ -633,11 +633,16 @@ main .menu .menu__starter .menu_card .menu_card-width .menu_card-content .menu_c
   text-overflow: ellipsis;
   overflow: hidden;
 }
+@media (min-width: 1024px) {
+  main .menu .menu__starter .menu_card .menu_card-width .menu_card-content, main .menu .menu__dish .menu_card .menu_card-width .menu_card-content, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-content {
+    width: 100%;
+  }
+}
 main .menu .menu__starter .menu_card .menu_card-width .menu_card-price, main .menu .menu__dish .menu_card .menu_card-width .menu_card-price, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-price {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: flex-start;
+  justify-content: flex-end;
   flex-wrap: nowrap;
   font-size: 15px;
   font-style: normal;
@@ -653,6 +658,7 @@ main .menu .menu__starter .menu_card .hide-checkbox, main .menu .menu__dish .men
   height: 72px;
   border-radius: 15px;
   opacity: 0;
+  z-index: 10;
 }
 main .menu .menu__starter .menu_card .green-back, main .menu .menu__dish .menu_card .green-back, main .menu .menu__dessert .menu_card .green-back {
   position: absolute;
@@ -670,13 +676,20 @@ main .menu .menu__starter .menu_card .green-back .fa-regular, main .menu .menu__
   justify-content: center;
   flex-wrap: nowrap;
   color: white;
-  font-size: 24px;
+  font-size: 0px;
   height: 72px;
+  opacity: 0;
+}
+main .menu .menu__starter .menu_card .hide-checkbox:checked ~ .green-back .fa-regular, main .menu .menu__dish .menu_card .hide-checkbox:checked ~ .green-back .fa-regular, main .menu .menu__dessert .menu_card .hide-checkbox:checked ~ .green-back .fa-regular {
+  opacity: 1;
+  font-size: 24px;
+  transition: opacity 0.2s ease-in-out 0.2s;
+  transition: font-size 0.2s ease-in-out 0.2s;
 }
 main .menu .menu__starter .menu_card .hide-checkbox:checked ~ .green-back, main .menu .menu__dish .menu_card .hide-checkbox:checked ~ .green-back, main .menu .menu__dessert .menu_card .hide-checkbox:checked ~ .green-back {
   width: 20%;
   min-width: 60px;
-  transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out 0.2;
 }
 main .menu .menu__starter .menu_card .hide-checkbox:not(checked) ~ .green-back, main .menu .menu__dish .menu_card .hide-checkbox:not(checked) ~ .green-back, main .menu .menu__dessert .menu_card .hide-checkbox:not(checked) ~ .green-back {
   width: 0;
