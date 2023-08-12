@@ -5,6 +5,138 @@ body {
     margin : auto;
 }
 
+.loader {
+    @include flex (row,center,center);
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(145deg, $pink-color 0%, $purple-color 100%);
+    font-size: 48px;
+    font-family: "Shrikhand";
+    text-stroke: 1px white; 
+     -webkit-text-stroke: 1px white;
+    animation : disappear 0.3s linear 2.7s forwards;
+.circle {
+    @include flex (row,center,center);
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    .outer-circle {
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        background-color: white;
+        border: 2px solid black;
+        box-shadow: inset 0px 0px 10px black;
+        z-index: 1;
+      }
+      
+    .middle-circle {
+        background-color: white;
+        border: 5px double black;
+        z-index: 0;
+      }
+}
+    
+.oh {
+    z-index: 2;
+    animation: scale_spin 0.5s ease-in-out forwards;
+}
+.my {
+    z-index: 2;
+    opacity: 0;
+    animation : fall 0.5s ease-out 0.5s forwards, bounce 1.2s ease-out 0.9s forwards;;
+}
+.food {
+    z-index: 2;
+    opacity: 0;
+    perspective-origin: bottom right;
+    animation : toolate 0.8s ease-out 1.7s forwards;
+}
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        height: 100vh;
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+@keyframes scale_spin {
+    0% {
+        transform: rotate(0deg) scale(0);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-60vh) scale(3);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    } 
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0) scaleY(50%) scaleX(110%);
+    }
+    10% {
+        transform: translateY(-80px) scaleY(185%) scaleX(50%);
+    }
+    20% {
+        transform: translateY(0) scaleY(60%) scaleX(110%);
+    }
+    30% {
+        transform: translateY(-55px) scaleY(165%) scaleX(62%);
+    }
+    40% {
+        transform: translateY(0) scaleY(70%) scaleX(108%);
+    }
+    50% {
+        transform: translateY(-30px) scaleY(150%) scaleX(85%);
+    }
+    60% {
+        transform: translateY(0) scaleY(85%) scaleX(105%);
+    }
+    70% {
+        transform: translateY(-20px) scaleY(130%) scaleX(93%);
+    }
+    80% {
+        transform: translateY(0) scaleY(95%) scaleX(103%);
+    }
+    70% {
+        transform: translateY(-5px) scaleY(115%) scaleX(97%);
+    }
+    80% {
+        transform: translateY(0) scaleY(100%) scaleX(100%);
+    }
+    }
+
+@keyframes toolate {
+    0% {
+        transform: translateX(60vw) skew(-55deg);
+        opacity: 1;
+    }
+    90% {
+        transform: skew(-43deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0) perspective(100px);
+        perspective: 0px;
+        opacity: 1;
+    } 
+
+}
+
 .mainheader {
     @include flex (column,center,space-between);
     height: 113px;
