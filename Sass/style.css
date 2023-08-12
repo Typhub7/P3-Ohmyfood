@@ -57,8 +57,7 @@ body {
   height: 100vh;
   background: linear-gradient(145deg, #FF79DA 0%, #9356DC 100%);
   font-size: 48px;
-  font-family: "Shrikhand";
-  text-stroke: 1px white;
+  font-family: "Shrikhand", sans-serif;
   -webkit-text-stroke: 1px white;
   animation: disappear 0.3s linear 2.7s forwards;
 }
@@ -498,15 +497,15 @@ main .restaurant__container .restaurant__heart #heart-checkbox-4:checked ~ .hear
   opacity: 0;
   scale: 0.1;
 }
-main .restaurant__container .restaurant__heart #heart-checkbox-1:not(checked) ~ .heart-label .heart-full-1,
-main .restaurant__container .restaurant__heart #heart-checkbox-2:not(checked) ~ .heart-label .heart-full-2,
-main .restaurant__container .restaurant__heart #heart-checkbox-3:not(checked) ~ .heart-label .heart-full-3,
-main .restaurant__container .restaurant__heart #heart-checkbox-4:not(checked) ~ .heart-label .heart-full-4 {
+main .restaurant__container .restaurant__heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-full-1,
+main .restaurant__container .restaurant__heart #heart-checkbox-2:not(:checked) ~ .heart-label .heart-full-2,
+main .restaurant__container .restaurant__heart #heart-checkbox-3:not(:checked) ~ .heart-label .heart-full-3,
+main .restaurant__container .restaurant__heart #heart-checkbox-4:not(:checked) ~ .heart-label .heart-full-4 {
   opacity: 0;
   scale: 0.1;
 }
-main .restaurant__container .restaurant__heart #heart-checkbox-1:not(checked) ~ .heart-label .heart-empty-1,
-main .restaurant__container .restaurant__heart #heart-checkbox-2:not(checked) ~ .heart-label .heart-empty-2,
+main .restaurant__container .restaurant__heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty-1,
+main .restaurant__container .restaurant__heart #heart-checkbox-2:not(:checked) ~ .heart-label .heart-empty-2,
 main .restaurant__container .restaurant__heart #heart-checkbox-3:not(checked) ~ .heart-label .heart-empty-3,
 main .restaurant__container .restaurant__heart #heart-checkbox-4:not(checked) ~ .heart-label .heart-empty-4 {
   opacity: 1;
