@@ -63,7 +63,7 @@ main {
                     left: -5px;
                     top: 5px;
                 }
-                .heart-full-1 {
+                .heart-full {
                     font-size: 24px;
                     color: transparent;
                     background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
@@ -74,21 +74,21 @@ main {
                     cursor: pointer;
                     transition: all 0.3s ease-in-out;                  
                 }
-                .heart-empty-1 {
+                .heart-empty {
                     color:black;
                     @include Opacity-and-Scale (1,1);
                     transition: all 0.3s ease-in-out;                            
                 }
-                #heart-checkbox-1:checked ~ .heart-label .heart-full-1 {
+                #heart-checkbox-1:checked ~ .heart-label .heart-full {
                     @include Opacity-and-Scale (1,1);
                 }
-                #heart-checkbox-1:checked ~ .heart-label .heart-empty-1  {
+                #heart-checkbox-1:checked ~ .heart-label .heart-empty  {
                     @include Opacity-and-Scale (0,0.1);
                 }
-                #heart-checkbox-1:not(:checked) ~ .heart-label .heart-full-1 {
+                #heart-checkbox-1:not(:checked) ~ .heart-label .heart-full {
                     @include Opacity-and-Scale (0,0.1);
                 }
-                #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty-1 {
+                #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty {
                     @include Opacity-and-Scale (1,1);
                 }
             }
