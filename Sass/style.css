@@ -36,17 +36,6 @@ a:link {
   opacity: 1;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  width: 100%;
-  margin: auto;
-}
-
 .loader {
   display: flex;
   flex-direction: row;
@@ -55,6 +44,7 @@ body {
   flex-wrap: nowrap;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background: linear-gradient(145deg, #FF79DA 0%, #9356DC 100%);
   font-size: 48px;
   font-family: "Shrikhand", sans-serif;
@@ -175,11 +165,22 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translateX(0) perspective(100px);
-    perspective: 0px;
+    transform: translateX(0) skew(0deg);
     opacity: 1;
   }
 }
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
 .mainheader {
   display: flex;
   flex-direction: column;
@@ -506,8 +507,8 @@ main .restaurant__container .restaurant__heart #heart-checkbox-4:not(:checked) ~
 }
 main .restaurant__container .restaurant__heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty-1,
 main .restaurant__container .restaurant__heart #heart-checkbox-2:not(:checked) ~ .heart-label .heart-empty-2,
-main .restaurant__container .restaurant__heart #heart-checkbox-3:not(checked) ~ .heart-label .heart-empty-3,
-main .restaurant__container .restaurant__heart #heart-checkbox-4:not(checked) ~ .heart-label .heart-empty-4 {
+main .restaurant__container .restaurant__heart #heart-checkbox-3:not(:checked) ~ .heart-label .heart-empty-3,
+main .restaurant__container .restaurant__heart #heart-checkbox-4:not(:checked) ~ .heart-label .heart-empty-4 {
   opacity: 1;
   scale: 1;
 }
@@ -522,7 +523,14 @@ main .restaurant__container .restaurant__heart #heart-checkbox-4:not(checked) ~ 
   color: white;
   width: 100%;
 }
-.footer .footer__container {
+.footer h2 {
+  font-family: "Shrikhand", sans-serif;
+}
+.footer a {
+  color: white;
+  font-size: 1rem;
+}
+.footer__container {
   width: 322px;
   padding: 22px 25px 22px 25px;
   gap: 16px;
@@ -533,7 +541,7 @@ main .restaurant__container .restaurant__heart #heart-checkbox-4:not(checked) ~ 
   flex-wrap: nowrap;
 }
 @media (min-width: 1024px) {
-  .footer .footer__container {
+  .footer__container {
     width: 1440px;
     display: flex;
     flex-direction: row-reverse;
@@ -544,13 +552,13 @@ main .restaurant__container .restaurant__heart #heart-checkbox-4:not(checked) ~ 
     padding: 30px 25px 30px 25px;
   }
 }
-.footer .footer__container ul {
+.footer ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 @media (min-width: 1024px) {
-  .footer .footer__container ul {
+  .footer ul {
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -559,30 +567,23 @@ main .restaurant__container .restaurant__heart #heart-checkbox-4:not(checked) ~ 
     gap: 10px;
   }
 }
-.footer .footer__container ul li {
+.footer li {
   margin-bottom: 2vh;
 }
 @media (min-width: 1024px) {
-  .footer .footer__container ul li {
+  .footer li {
     margin-bottom: 0;
     width: 200px;
   }
 }
-.footer .footer__container ul li .fa-solid {
+.footer li .fa-solid {
   width: 11px;
   padding-right: 2vw;
 }
 @media (min-width: 1024px) {
-  .footer .footer__container ul li .fa-solid {
+  .footer li .fa-solid {
     padding-right: 11px;
   }
-}
-.footer .footer__container h2 {
-  font-family: "Shrikhand", sans-serif;
-}
-.footer .footer__container a {
-  color: white;
-  font-size: 1rem;
 }
 
 .restauheader {
@@ -692,11 +693,11 @@ main .menu .menu__title .menu__title-heart #heart-checkbox-1:checked ~ .heart-la
   opacity: 0;
   scale: 0.1;
 }
-main .menu .menu__title .menu__title-heart #heart-checkbox-1:not(checked) ~ .heart-label .heart-full-1 {
+main .menu .menu__title .menu__title-heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-full-1 {
   opacity: 0;
   scale: 0.1;
 }
-main .menu .menu__title .menu__title-heart #heart-checkbox-1:not(checked) ~ .heart-label .heart-empty-1 {
+main .menu .menu__title .menu__title-heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty-1 {
   opacity: 1;
   scale: 1;
 }
@@ -824,7 +825,7 @@ main .menu .menu__starter .menu_card .hide-checkbox:checked ~ .green-back, main 
   min-width: 60px;
   transition: width 0.2s ease-in-out 0.2;
 }
-main .menu .menu__starter .menu_card .hide-checkbox:not(checked) ~ .green-back, main .menu .menu__dish .menu_card .hide-checkbox:not(checked) ~ .green-back, main .menu .menu__dessert .menu_card .hide-checkbox:not(checked) ~ .green-back {
+main .menu .menu__starter .menu_card .hide-checkbox:not(:checked) ~ .green-back, main .menu .menu__dish .menu_card .hide-checkbox:not(:checked) ~ .green-back, main .menu .menu__dessert .menu_card .hide-checkbox:not(:checked) ~ .green-back {
   width: 0;
   transition: width 0.2s ease-in-out;
 }
@@ -832,7 +833,7 @@ main .menu .menu__starter .menu_card .hide-checkbox:checked ~ .menu_card-width, 
   width: 80%;
   transition: width 0.2s ease-in-out;
 }
-main .menu .menu__starter .menu_card .hide-checkbox:not(checked) ~ .menu_card-width, main .menu .menu__dish .menu_card .hide-checkbox:not(checked) ~ .menu_card-width, main .menu .menu__dessert .menu_card .hide-checkbox:not(checked) ~ .menu_card-width {
+main .menu .menu__starter .menu_card .hide-checkbox:not(:checked) ~ .menu_card-width, main .menu .menu__dish .menu_card .hide-checkbox:not(:checked) ~ .menu_card-width, main .menu .menu__dessert .menu_card .hide-checkbox:not(:checked) ~ .menu_card-width {
   width: 100%;
   transition: width 0.2s ease-in-out;
 }

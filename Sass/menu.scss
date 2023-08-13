@@ -85,10 +85,10 @@ main {
                 #heart-checkbox-1:checked ~ .heart-label .heart-empty-1  {
                     @include Opacity-and-Scale (0,0.1);
                 }
-                #heart-checkbox-1:not(checked) ~ .heart-label .heart-full-1 {
+                #heart-checkbox-1:not(:checked) ~ .heart-label .heart-full-1 {
                     @include Opacity-and-Scale (0,0.1);
                 }
-                #heart-checkbox-1:not(checked) ~ .heart-label .heart-empty-1 {
+                #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty-1 {
                     @include Opacity-and-Scale (1,1);
                 }
             }
@@ -205,7 +205,7 @@ main {
                     transition: width 0.2s ease-in-out 0.2;
                   }
 
-                .hide-checkbox:not(checked) ~ .green-back {
+                .hide-checkbox:not(:checked) ~ .green-back {
                     width: 0; 
                     transition: width 0.2s ease-in-out;
                 }
@@ -213,7 +213,7 @@ main {
                     width: 80%; 
                     transition: width 0.2s ease-in-out;
                   }
-                .hide-checkbox:not(checked) ~ .menu_card-width {
+                .hide-checkbox:not(:checked) ~ .menu_card-width {
                     width: 100%; 
                     transition: width 0.2s ease-in-out;
                 }                         
