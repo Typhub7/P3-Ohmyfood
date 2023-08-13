@@ -445,7 +445,8 @@ main {
   font-size: 1.063rem;
   font-weight: 300;
 }
-.restaurant .restaurant__heart {
+
+.restaurant__heart {
   position: relative;
   top: 77%;
   left: 86%;
@@ -453,17 +454,17 @@ main {
   height: 23px;
   font-size: 22px;
 }
-.restaurant .restaurant__heart .hide-checkbox {
+.restaurant__heart .hide-checkbox {
   display: none;
   margin: 0;
   z-index: 10;
 }
-.restaurant .restaurant__heart i {
+.restaurant__heart i {
   position: absolute;
   left: -5px;
   top: 5px;
 }
-.restaurant .restaurant__heart .heart-full {
+.restaurant__heart .heart-full {
   font-size: 24px;
   color: transparent;
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
@@ -475,37 +476,37 @@ main {
   scale: 0.1;
   transition: all 0.3s ease-in-out;
 }
-.restaurant .restaurant__heart .heart-empty {
+.restaurant__heart .heart-empty {
   color: black;
   opacity: 1;
   scale: 1;
   transition: all 0.3s ease-in-out;
 }
-.restaurant .restaurant__heart #heart-checkbox-1:checked ~ .heart-label .heart-full,
-.restaurant .restaurant__heart #heart-checkbox-2:checked ~ .heart-label .heart-full,
-.restaurant .restaurant__heart #heart-checkbox-3:checked ~ .heart-label .heart-full,
-.restaurant .restaurant__heart #heart-checkbox-4:checked ~ .heart-label .heart-full {
+.restaurant__heart #heart-checkbox-1:checked ~ .heart-label .heart-full,
+.restaurant__heart #heart-checkbox-2:checked ~ .heart-label .heart-full,
+.restaurant__heart #heart-checkbox-3:checked ~ .heart-label .heart-full,
+.restaurant__heart #heart-checkbox-4:checked ~ .heart-label .heart-full {
   opacity: 1;
   scale: 1;
 }
-.restaurant .restaurant__heart #heart-checkbox-1:checked ~ .heart-label .heart-empty,
-.restaurant .restaurant__heart #heart-checkbox-2:checked ~ .heart-label .heart-empty,
-.restaurant .restaurant__heart #heart-checkbox-3:checked ~ .heart-label .heart-empty,
-.restaurant .restaurant__heart #heart-checkbox-4:checked ~ .heart-label .heart-empty {
+.restaurant__heart #heart-checkbox-1:checked ~ .heart-label .heart-empty,
+.restaurant__heart #heart-checkbox-2:checked ~ .heart-label .heart-empty,
+.restaurant__heart #heart-checkbox-3:checked ~ .heart-label .heart-empty,
+.restaurant__heart #heart-checkbox-4:checked ~ .heart-label .heart-empty {
   opacity: 0;
   scale: 0.1;
 }
-.restaurant .restaurant__heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-full,
-.restaurant .restaurant__heart #heart-checkbox-2:not(:checked) ~ .heart-label .heart-full,
-.restaurant .restaurant__heart #heart-checkbox-3:not(:checked) ~ .heart-label .heart-full,
-.restaurant .restaurant__heart #heart-checkbox-4:not(:checked) ~ .heart-label .heart-full {
+.restaurant__heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-full,
+.restaurant__heart #heart-checkbox-2:not(:checked) ~ .heart-label .heart-full,
+.restaurant__heart #heart-checkbox-3:not(:checked) ~ .heart-label .heart-full,
+.restaurant__heart #heart-checkbox-4:not(:checked) ~ .heart-label .heart-full {
   opacity: 0;
   scale: 0.1;
 }
-.restaurant .restaurant__heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty,
-.restaurant .restaurant__heart #heart-checkbox-2:not(:checked) ~ .heart-label .heart-empty,
-.restaurant .restaurant__heart #heart-checkbox-3:not(:checked) ~ .heart-label .heart-empty,
-.restaurant .restaurant__heart #heart-checkbox-4:not(:checked) ~ .heart-label .heart-empty {
+.restaurant__heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty,
+.restaurant__heart #heart-checkbox-2:not(:checked) ~ .heart-label .heart-empty,
+.restaurant__heart #heart-checkbox-3:not(:checked) ~ .heart-label .heart-empty,
+.restaurant__heart #heart-checkbox-4:not(:checked) ~ .heart-label .heart-empty {
   opacity: 1;
   scale: 1;
 }
@@ -617,7 +618,8 @@ main img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .menu {
+
+.menu {
   position: relative;
   top: -50px;
   width: 90%;
@@ -632,15 +634,15 @@ main .menu {
   flex-wrap: nowrap;
   gap: 40px;
 }
-main .menu .menu__title {
+.menu__title {
   font-family: "Shrikhand", sans-serif;
   height: 27px;
 }
-main .menu .menu__title .menu__title-h1 {
+.menu__title-h1 {
   font-size: 28px;
   font-weight: 400;
 }
-main .menu .menu__title .menu__title-heart {
+.menu__title-heart {
   position: relative;
   top: -36px;
   left: 91%;
@@ -649,22 +651,22 @@ main .menu .menu__title .menu__title-heart {
   font-size: 22px;
 }
 @media (min-width: 1024px) {
-  main .menu .menu__title .menu__title-heart {
+  .menu__title-heart {
     bottom: 58%;
     left: 97%;
   }
 }
-main .menu .menu__title .menu__title-heart .hide-checkbox {
+.menu__title .hide-checkbox {
   display: none;
   margin: 0;
   z-index: 10;
 }
-main .menu .menu__title .menu__title-heart i {
+.menu__title i {
   position: absolute;
   left: -5px;
   top: 5px;
 }
-main .menu .menu__title .menu__title-heart .heart-full {
+.menu__title .heart-full {
   font-size: 24px;
   color: transparent;
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
@@ -676,29 +678,29 @@ main .menu .menu__title .menu__title-heart .heart-full {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-main .menu .menu__title .menu__title-heart .heart-empty {
+.menu__title .heart-empty {
   color: black;
   opacity: 1;
   scale: 1;
   transition: all 0.3s ease-in-out;
 }
-main .menu .menu__title .menu__title-heart #heart-checkbox-1:checked ~ .heart-label .heart-full {
+.menu__title #heart-checkbox-1:checked ~ .heart-label .heart-full {
   opacity: 1;
   scale: 1;
 }
-main .menu .menu__title .menu__title-heart #heart-checkbox-1:checked ~ .heart-label .heart-empty {
+.menu__title #heart-checkbox-1:checked ~ .heart-label .heart-empty {
   opacity: 0;
   scale: 0.1;
 }
-main .menu .menu__title .menu__title-heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-full {
+.menu__title #heart-checkbox-1:not(:checked) ~ .heart-label .heart-full {
   opacity: 0;
   scale: 0.1;
 }
-main .menu .menu__title .menu__title-heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty {
+.menu__title #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty {
   opacity: 1;
   scale: 1;
 }
-main .menu .menu__starter, main .menu .menu__dish, main .menu .menu__dessert {
+.menu__starter, .menu__dish, .menu__dessert {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -706,12 +708,12 @@ main .menu .menu__starter, main .menu .menu__dish, main .menu .menu__dessert {
   flex-wrap: nowrap;
   gap: 12px;
 }
-main .menu .menu__starter .menu_card-h4, main .menu .menu__dish .menu_card-h4, main .menu .menu__dessert .menu_card-h4 {
+.menu .card__h4 {
   font-weight: 300;
   position: relative;
   margin-bottom: 5px;
 }
-main .menu .menu__starter .menu_card-h4::before, main .menu .menu__dish .menu_card-h4::before, main .menu .menu__dessert .menu_card-h4::before {
+.menu .card__h4::before {
   content: "";
   position: absolute;
   bottom: -7px;
@@ -720,7 +722,7 @@ main .menu .menu__starter .menu_card-h4::before, main .menu .menu__dish .menu_ca
   height: 3px;
   background-color: #99e2d0;
 }
-main .menu .menu__starter .menu_card, main .menu .menu__dish .menu_card, main .menu .menu__dessert .menu_card {
+.menu .card {
   position: relative;
   background-color: white;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
@@ -730,16 +732,19 @@ main .menu .menu__starter .menu_card, main .menu .menu__dish .menu_card, main .m
   opacity: 0;
   animation: fadeIn 0.6s ease-in-out forwards;
 }
-main .menu .menu__starter .menu_card:nth-of-type(1), main .menu .menu__dish .menu_card:nth-of-type(1), main .menu .menu__dessert .menu_card:nth-of-type(1) {
+.menu .card:nth-of-type(1) {
   animation-delay: 0.2s;
 }
-main .menu .menu__starter .menu_card:nth-of-type(2), main .menu .menu__dish .menu_card:nth-of-type(2), main .menu .menu__dessert .menu_card:nth-of-type(2) {
+.menu .card:nth-of-type(2) {
   animation-delay: 0.4s;
 }
-main .menu .menu__starter .menu_card:nth-of-type(3), main .menu .menu__dish .menu_card:nth-of-type(3), main .menu .menu__dessert .menu_card:nth-of-type(3) {
+.menu .card:nth-of-type(3) {
   animation-delay: 0.6s;
 }
-main .menu .menu__starter .menu_card .menu_card-width, main .menu .menu__dish .menu_card .menu_card-width, main .menu .menu__dessert .menu_card .menu_card-width {
+.menu .card:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+.menu .card__width {
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -747,17 +752,17 @@ main .menu .menu__starter .menu_card .menu_card-width, main .menu .menu__dish .m
   flex-wrap: nowrap;
   width: 80%;
 }
-main .menu .menu__starter .menu_card .menu_card-width .menu_card-content, main .menu .menu__dish .menu_card .menu_card-width .menu_card-content, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-content {
+.menu .card__content {
   width: 88%;
 }
-main .menu .menu__starter .menu_card .menu_card-width .menu_card-content .menu_card-h2, main .menu .menu__dish .menu_card .menu_card-width .menu_card-content .menu_card-h2, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-content .menu_card-h2 {
+.menu .card__content .card__h2 {
   font-weight: 500;
   margin-bottom: 5px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main .menu .menu__starter .menu_card .menu_card-width .menu_card-content .menu_card-p, main .menu .menu__dish .menu_card .menu_card-width .menu_card-content .menu_card-p, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-content .menu_card-p {
+.menu .card__content .card__p {
   font-size: 15px;
   font-weight: 300;
   white-space: nowrap;
@@ -765,11 +770,11 @@ main .menu .menu__starter .menu_card .menu_card-width .menu_card-content .menu_c
   overflow: hidden;
 }
 @media (min-width: 1024px) {
-  main .menu .menu__starter .menu_card .menu_card-width .menu_card-content, main .menu .menu__dish .menu_card .menu_card-width .menu_card-content, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-content {
+  .menu .card__content {
     width: 100%;
   }
 }
-main .menu .menu__starter .menu_card .menu_card-width .menu_card-price, main .menu .menu__dish .menu_card .menu_card-width .menu_card-price, main .menu .menu__dessert .menu_card .menu_card-width .menu_card-price {
+.menu .card__price {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -781,7 +786,7 @@ main .menu .menu__starter .menu_card .menu_card-width .menu_card-price, main .me
   line-height: normal;
   width: 10%;
 }
-main .menu .menu__starter .menu_card .hide-checkbox, main .menu .menu__dish .menu_card .hide-checkbox, main .menu .menu__dessert .menu_card .hide-checkbox {
+.menu .card .hide-checkbox {
   position: absolute;
   left: 0;
   top: 0;
@@ -791,7 +796,7 @@ main .menu .menu__starter .menu_card .hide-checkbox, main .menu .menu__dish .men
   opacity: 0;
   z-index: 10;
 }
-main .menu .menu__starter .menu_card .green-back, main .menu .menu__dish .menu_card .green-back, main .menu .menu__dessert .menu_card .green-back {
+.menu .card .green-back {
   position: absolute;
   right: 0;
   top: 0;
@@ -800,7 +805,7 @@ main .menu .menu__starter .menu_card .green-back, main .menu .menu__dish .menu_c
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
 }
-main .menu .menu__starter .menu_card .green-back .fa-regular, main .menu .menu__dish .menu_card .green-back .fa-regular, main .menu .menu__dessert .menu_card .green-back .fa-regular {
+.menu .card .green-back .fa-regular {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -811,30 +816,30 @@ main .menu .menu__starter .menu_card .green-back .fa-regular, main .menu .menu__
   height: 72px;
   opacity: 0;
 }
-main .menu .menu__starter .menu_card .hide-checkbox:checked ~ .green-back .fa-regular, main .menu .menu__dish .menu_card .hide-checkbox:checked ~ .green-back .fa-regular, main .menu .menu__dessert .menu_card .hide-checkbox:checked ~ .green-back .fa-regular {
+.menu .card .hide-checkbox:checked ~ .green-back .fa-regular {
   opacity: 1;
   font-size: 24px;
   transition: opacity 0.2s ease-in-out 0.2s;
   transition: font-size 0.2s ease-in-out 0.2s;
 }
-main .menu .menu__starter .menu_card .hide-checkbox:checked ~ .green-back, main .menu .menu__dish .menu_card .hide-checkbox:checked ~ .green-back, main .menu .menu__dessert .menu_card .hide-checkbox:checked ~ .green-back {
+.menu .card .hide-checkbox:checked ~ .green-back {
   width: 20%;
   min-width: 60px;
-  transition: width 0.2s ease-in-out 0.2;
+  transition: width 0.2s ease-in-out;
 }
-main .menu .menu__starter .menu_card .hide-checkbox:not(:checked) ~ .green-back, main .menu .menu__dish .menu_card .hide-checkbox:not(:checked) ~ .green-back, main .menu .menu__dessert .menu_card .hide-checkbox:not(:checked) ~ .green-back {
+.menu .card .hide-checkbox:not(:checked) ~ .green-back {
   width: 0;
   transition: width 0.2s ease-in-out;
 }
-main .menu .menu__starter .menu_card .hide-checkbox:checked ~ .menu_card-width, main .menu .menu__dish .menu_card .hide-checkbox:checked ~ .menu_card-width, main .menu .menu__dessert .menu_card .hide-checkbox:checked ~ .menu_card-width {
+.menu .card .hide-checkbox:checked ~ .card__width {
   width: 80%;
   transition: width 0.2s ease-in-out;
 }
-main .menu .menu__starter .menu_card .hide-checkbox:not(:checked) ~ .menu_card-width, main .menu .menu__dish .menu_card .hide-checkbox:not(:checked) ~ .menu_card-width, main .menu .menu__dessert .menu_card .hide-checkbox:not(:checked) ~ .menu_card-width {
+.menu .card .hide-checkbox:not(:checked) ~ .card__width {
   width: 100%;
   transition: width 0.2s ease-in-out;
 }
-main .menu .menu__btn {
+.menu__btn {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -850,11 +855,11 @@ main .menu .menu__btn {
   color: white;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-main .menu .menu__btn:hover, main .menu .menu__btn:active {
+.menu__btn:hover, .menu__btn:active {
   background: linear-gradient(175deg, #ff88de 0%, #9b63df 100%);
   box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.4);
 }
-main .menu .menu__btn:not(:hover):not(:active) {
+.menu__btn:not(:hover):not(:active) {
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
