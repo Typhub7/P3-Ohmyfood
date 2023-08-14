@@ -147,24 +147,25 @@ main {
         }
         &__content {
             width: 88%;
-            .card__h2 {
-                font-weight: 500;
-                margin-bottom: 5px;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;  
-            }   
-            .card__p {
-                font-size: 15px;
-                font-weight: 300;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-            @media (min-width: 1024px) {
-                width: 100%;
-            }
         }
+        &__h2 {
+            font-weight: 500;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;  
+        }   
+        &__p {
+            font-size: 15px;
+            font-weight: 300;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        @media (min-width: 1024px) {
+            width: 100%;
+        }
+        
 
         &__price {
             @include flex(row,flex-end,flex-end);
@@ -193,14 +194,15 @@ main {
             height : 72px;
             background-color: $light-green-color;
             border-radius: 0 15px 15px 0;
-            .fa-regular {
-                @include flex(row,center,center);
-                color : white;
-                font-size: 0px;
-                height: 72px;
-                opacity: 0;
-            }
         }
+        .fa-regular {
+            @include flex(row,center,center);
+            color : white;
+            font-size: 0px;
+            height: 72px;
+            opacity: 0;
+        }
+        
         .hide-checkbox:checked ~ .green-back .fa-regular {
             opacity: 1;
             font-size: 24px;
@@ -226,8 +228,7 @@ main {
             width: 100%; 
             transition: width 0.2s ease-in-out;
         }                         
-    }           
-    
+    }               
 
     &__btn {
         @include flex(row,center,center);
@@ -252,7 +253,6 @@ main {
     } 
 }
 
-
 @keyframes fadeIn {
     from {
     opacity: 0;
@@ -263,4 +263,3 @@ main {
     transform: translateY(0);
     }
 }
-

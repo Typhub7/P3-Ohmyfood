@@ -1,13 +1,14 @@
 .loader {
     @include flex (row,center,center);
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    box-sizing: border-box;
+    height: 105vh;
+    position: absolute;
+    z-index: 10;
     background: linear-gradient(145deg, $pink-color 0%, $purple-color 100%);
     font-size: 48px;
     font-family: "Shrikhand",sans-serif;
-    //animation : disappear 0.3s linear 2.7s forwards;
+    animation : disappear 0.3s linear 2.7s forwards;
+}
 .plate {
     @include flex (row,center,center);
     position: absolute;
@@ -21,7 +22,7 @@
         background-color: white;
         border: 2px solid black;
         box-shadow: inset 0px 0px 10px black;
-        z-index: 1;
+        z-index: 30;
       }
       
     &__outer {
@@ -32,25 +33,24 @@
         background-color: white;
         border: 5px double black;
         box-shadow: 0px 0px 5px black;
-        z-index: 0;
+        z-index: 20;
       }
 }
     
 .oh {
-    z-index: 2;
+    z-index: 40;
     animation: scale_spin 0.5s ease-in-out forwards;
 }
 .my {
-    z-index: 2;
+    z-index: 40;
     opacity: 0;
     animation : fall 0.5s ease-out 0.5s forwards, bounce 1.2s ease-out 0.9s forwards;
 }
 .food {
-    z-index: 2;
+    z-index: 40;
     opacity: 0;
     perspective-origin: bottom right;
     animation : toolate 0.8s ease-out 1.7s forwards;
-}
 }
 
 @keyframes disappear {

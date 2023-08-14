@@ -41,14 +41,16 @@ a:link {
   justify-content: center;
   flex-wrap: nowrap;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  box-sizing: border-box;
+  height: 105vh;
+  position: absolute;
+  z-index: 10;
   background: linear-gradient(145deg, #FF79DA 0%, #9356DC 100%);
   font-size: 48px;
   font-family: "Shrikhand", sans-serif;
+  animation: disappear 0.3s linear 2.7s forwards;
 }
-.loader .plate {
+
+.plate {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -58,7 +60,7 @@ a:link {
   width: 350px;
   height: 350px;
 }
-.loader .plate__center {
+.plate__center {
   position: absolute;
   width: 80%;
   height: 80%;
@@ -66,9 +68,9 @@ a:link {
   background-color: white;
   border: 2px solid black;
   box-shadow: inset 0px 0px 10px black;
-  z-index: 1;
+  z-index: 30;
 }
-.loader .plate__outer {
+.plate__outer {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -76,19 +78,22 @@ a:link {
   background-color: white;
   border: 5px double black;
   box-shadow: 0px 0px 5px black;
-  z-index: 0;
+  z-index: 20;
 }
-.loader .oh {
-  z-index: 2;
+
+.oh {
+  z-index: 40;
   animation: scale_spin 0.5s ease-in-out forwards;
 }
-.loader .my {
-  z-index: 2;
+
+.my {
+  z-index: 40;
   opacity: 0;
   animation: fall 0.5s ease-out 0.5s forwards, bounce 1.2s ease-out 0.9s forwards;
 }
-.loader .food {
-  z-index: 2;
+
+.food {
+  z-index: 40;
   opacity: 0;
   perspective-origin: bottom right;
   animation: toolate 0.8s ease-out 1.7s forwards;
@@ -173,15 +178,17 @@ a:link {
 }
 body {
   font-family: "Roboto", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  width: 100%;
   margin: auto;
+  width: 100vw;
+  overflow: hidden;
+  animation: appear 3.1s linear forwards;
 }
 
+@keyframes appear {
+  100% {
+    overflow: visible;
+  }
+}
 .mainheader {
   display: flex;
   flex-direction: column;
@@ -756,14 +763,14 @@ main img {
 .menu .card__content {
   width: 88%;
 }
-.menu .card__content .card__h2 {
+.menu .card__h2 {
   font-weight: 500;
   margin-bottom: 5px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu .card__content .card__p {
+.menu .card__p {
   font-size: 15px;
   font-weight: 300;
   white-space: nowrap;
@@ -771,7 +778,7 @@ main img {
   overflow: hidden;
 }
 @media (min-width: 1024px) {
-  .menu .card__content {
+  .menu .card {
     width: 100%;
   }
 }
@@ -806,7 +813,7 @@ main img {
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
 }
-.menu .card .green-back .fa-regular {
+.menu .card .fa-regular {
   display: flex;
   flex-direction: row;
   align-items: center;
