@@ -1,6 +1,7 @@
 h1, h2, h3, h4, p {
   margin-top: 0;
   margin-bottom: 0;
+  cursor: default;
 }
 
 h1 {
@@ -42,11 +43,10 @@ a:link {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  box-sizing: border-box;
   background: linear-gradient(145deg, #FF79DA 0%, #9356DC 100%);
   font-size: 48px;
   font-family: "Shrikhand", sans-serif;
-  -webkit-text-stroke: 1px white;
-  animation: disappear 0.3s linear 2.7s forwards;
 }
 .loader .plate {
   display: flex;
@@ -75,6 +75,7 @@ a:link {
   border-radius: 50%;
   background-color: white;
   border: 5px double black;
+  box-shadow: 0px 0px 5px black;
   z-index: 0;
 }
 .loader .oh {
@@ -272,7 +273,7 @@ main {
   background: linear-gradient(175deg, #ff88de 0%, #9b63df 100%);
   box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.4);
 }
-.presentation__btn:not(:hover):not(:active) {
+.presentation__btn:not(:hover), .presentation__btn:not(:active) {
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
@@ -725,7 +726,7 @@ main img {
 .menu .card {
   position: relative;
   background-color: white;
-  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   height: 42px;
   padding: 15px;
