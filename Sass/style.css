@@ -395,6 +395,14 @@ main {
     max-width: 1040px;
   }
 }
+.restaurant__link {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
 .restaurant__card {
   display: flex;
   flex-direction: column;
@@ -462,6 +470,7 @@ main {
   width: 24px;
   height: 23px;
   font-size: 22px;
+  z-index: 5;
 }
 .restaurant__heart .hide-checkbox {
   display: none;
