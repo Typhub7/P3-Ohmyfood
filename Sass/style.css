@@ -107,6 +107,7 @@ a:link {
   100% {
     opacity: 0;
     height: 0;
+    z-index: -50;
   }
 }
 @keyframes scale_spin {
@@ -582,12 +583,12 @@ main {
     width: 200px;
   }
 }
-.footer li .fa-solid {
+.footer .fa-solid {
   width: 11px;
   padding-right: 2vw;
 }
 @media (min-width: 1024px) {
-  .footer li .fa-solid {
+  .footer .fa-solid {
     padding-right: 11px;
   }
 }

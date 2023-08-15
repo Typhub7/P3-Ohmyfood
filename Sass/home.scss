@@ -12,7 +12,6 @@ body {
     }
 }
 
-
 .mainheader {
     @include flex (column,center,space-between);
     height: 113px;
@@ -84,7 +83,6 @@ main {
         }
     }
 }
-
 .howto {
     @include flex (column,stretch,space-around);
     height: 440px;
@@ -327,12 +325,13 @@ main {
             margin-bottom: 0;
             width: 200px;
         }
-        .fa-solid {
-            width: 11px;
-            padding-right: 2vw;
-            @media (min-width: 1024px) {
-            padding-right : 11px;
-            }   
-        }
     }
+    .fa-solid {
+        width: 11px;
+        padding-right: 2vw;
+        @media (min-width: 1024px) {
+        padding-right : 11px;
+        }   
+    }
+    
 }
