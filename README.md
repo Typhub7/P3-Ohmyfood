@@ -16,7 +16,7 @@ Le projet est organisé de la manière suivante :
 - Le dossier `Sass/` contient les fichiers SCSS utilisées dans le site.
 - Le dossier `restaurants/` contient les pages html utilisées pour les restaurants dans le site.
 
-**##Restrictions :**
+## Restrictions :
 Aucun Framwork  ne devait être utilisé pour la réalisation de ce projet.
 Aucun autre langage ne devait être utilisé ( comme javascript, par exemple)
 Les animations doivent être uniquement en CSS.
