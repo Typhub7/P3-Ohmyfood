@@ -5,7 +5,7 @@
     position: absolute;
     z-index: 10;
     background: linear-gradient(145deg, $pink-color 0%, $purple-color 100%);
-    font-size: 48px;
+    font-size: 3rem;
     font-family: "Shrikhand",sans-serif;
     animation : disappear 0.3s linear 2.7s forwards;
 }
@@ -53,6 +53,7 @@
     animation : toolate 0.8s ease-out 1.7s forwards;
 }
 
+// Animation de disparition du loader
 @keyframes disappear {
     0% {
         opacity: 1;
@@ -65,6 +66,7 @@
     }
 }
 
+//Animation du mot "oh"
 @keyframes scale_spin {
     0% {
         transform: rotate(0deg) scale(0);
@@ -73,6 +75,8 @@
         transform: rotate(360deg) scale(1);
     }
 }
+
+// Animations de chute de "my"
 @keyframes fall {
     0% {
         transform: translateY(-60vh) scale(3);
@@ -83,42 +87,45 @@
         opacity: 1;
     } 
 }
+
+// Animations de rebonds de "my"
 @keyframes bounce {
     0% {
-        transform: translateY(0) scaleY(50%) scaleX(110%);
-    }
-    10% {
-        transform: translateY(-80px) scaleY(185%) scaleX(50%);
-    }
-    20% {
-        transform: translateY(0) scaleY(60%) scaleX(110%);
-    }
-    30% {
-        transform: translateY(-55px) scaleY(165%) scaleX(62%);
-    }
-    40% {
-        transform: translateY(0) scaleY(70%) scaleX(108%);
-    }
-    50% {
-        transform: translateY(-30px) scaleY(150%) scaleX(85%);
-    }
-    60% {
-        transform: translateY(0) scaleY(85%) scaleX(105%);
-    }
-    70% {
-        transform: translateY(-20px) scaleY(130%) scaleX(93%);
-    }
-    80% {
-        transform: translateY(0) scaleY(95%) scaleX(103%);
-    }
-    70% {
-        transform: translateY(-5px) scaleY(115%) scaleX(97%);
-    }
-    80% {
-        transform: translateY(0) scaleY(100%) scaleX(100%);
-    }
+        transform: translateY(0) scaleY(0.5) scaleX(1.1);
+      }
+      10% {
+        transform: translateY(-80px) scaleY(1.85) scaleX(0.5);
+      }
+      20% {
+        transform: translateY(0) scaleY(0.6) scaleX(1.1);
+      }
+      30% {
+        transform: translateY(-55px) scaleY(1.65) scaleX(0.62);
+      }
+      40% {
+        transform: translateY(0) scaleY(0.7) scaleX(1.08);
+      }
+      50% {
+        transform: translateY(-30px) scaleY(1.5) scaleX(0.85);
+      }
+      60% {
+        transform: translateY(0) scaleY(0.85) scaleX(1.05);
+      }
+      70% {
+        transform: translateY(-20px) scaleY(1.3) scaleX(0.93);
+      }
+      80% {
+        transform: translateY(0) scaleY(0.95) scaleX(1.03);
+      }
+      70% {
+        transform: translateY(-5px) scaleY(1.15) scaleX(0.97);
+      }
+      100% {
+        transform: translateY(0) scaleY(1) scaleX(1);
+      }
     }
 
+// Animations de retardataire de "food"
 @keyframes toolate {
     0% {
         transform: translateX(60vw) skew(-55deg);

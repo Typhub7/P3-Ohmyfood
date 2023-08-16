@@ -1,4 +1,4 @@
-//** Colors **// 
+// Colors  
 $purple-color: #9356DC;
 $pink-color: #FF79DA;
 $light-blue-color: #89C8FA;
@@ -9,9 +9,12 @@ $white-text : white;
 $light-grey: #F6F6F6;                   
 $medium-grey: #EAEAEA;
 $grey-footer : lighten(black, 20.8%);   
-$grey-fasolid : lighten(black,49.6%); 
+$grey-fasolid : lighten(black,49.6%);
 
-//** titles and link**//
+// breakpoint 
+$breakpoint: 1024px;
+
+// titles and link
 h1,h2,h3,h4,p {
     margin-top: 0;
     margin-bottom: 0;
@@ -44,7 +47,7 @@ a:link {
     opacity: 1; 
 }
 
-//** mixin **/
+// mixin 
 
 @mixin flex(
   $flex-direction: row,
@@ -67,5 +70,5 @@ a:link {
 
 @mixin Opacity-and-Scale ($opacity, $scale) {
     opacity: $opacity;
-    scale : $scale;
+    transform: scale($scale);
 }

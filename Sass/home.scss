@@ -88,7 +88,7 @@ main {
     height: 440px;
     margin-top: 20px;
     margin-bottom: 20px;
-    @media (min-width: 1024px) {
+    @media (min-width : $breakpoint) {
         @include flex (row,flex-end,center);
         gap : 24px;
         height: 130px;
@@ -147,7 +147,7 @@ main {
         max-width : 510px; 
         align-self: flex-start;
         margin : 0 auto;
-        @media (min-width: 1024px) {
+        @media (min-width: $breakpoint) {
             max-width: 1024px;
         }
     }
@@ -155,7 +155,7 @@ main {
     &__container {
         @include flex (column,center,space-around);
         gap: 2vh;
-        @media (min-width: 1024px) {
+        @media (min-width: $breakpoint) {
             @include flex (row,center,space-around,wrap);
             max-width: 1040px;
         }
@@ -227,7 +227,7 @@ main {
     left: 86%;
     width: 24px;
     height: 23px;
-    font-size: 22px;
+    font-size: 1.375rem;
     z-index: 5;
 
     .hide-checkbox {
@@ -241,7 +241,7 @@ main {
     }
 
     .heart-full {
-        font-size: 24px;
+        font-size: 1.5rem;
         color: transparent;
         background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
         -webkit-background-clip: text;
@@ -256,7 +256,7 @@ main {
         @include Opacity-and-Scale (1,1);
         transition: all 0.3s ease-in-out;                            
     }
-    
+    // Animation d'apparition du coeur coloré au clic
     #heart-checkbox-1:checked,
     #heart-checkbox-2:checked,
     #heart-checkbox-3:checked,
@@ -265,7 +265,7 @@ main {
         @include Opacity-and-Scale (1,1);
     }
     }
-
+    // Animation de disparition du coeur vide au clic
     #heart-checkbox-1:checked,
     #heart-checkbox-2:checked,
     #heart-checkbox-3:checked,
@@ -274,7 +274,7 @@ main {
         @include Opacity-and-Scale (0,0.1);
     }
     }
-
+    // Animation de disparition du coeur coloré au clic
     #heart-checkbox-1:not(:checked),
     #heart-checkbox-2:not(:checked),
     #heart-checkbox-3:not(:checked),
@@ -283,12 +283,12 @@ main {
         @include Opacity-and-Scale (0,0.1);
     }
     }
-
+    // Animation de d'apparition du coeur vide au clic
     #heart-checkbox-1:not(:checked),
     #heart-checkbox-2:not(:checked),
     #heart-checkbox-3:not(:checked),
     #heart-checkbox-4:not(:checked) {
-    ~ .heart-label .heart-empty{
+    ~ .heart-label .heart-empty {
     @include Opacity-and-Scale (1,1);
     } 
     }          
@@ -306,30 +306,30 @@ main {
         color : $white-text;
         font-size: 1rem;
     }
-    &__container{
+    &__container {
         width: 322px;
         padding: 22px 25px 22px 25px;
         gap : 16px;
         @include flex (column,flex-start,space-between);
-        @media (min-width: 1024px) {
+        @media (min-width: $breakpoint) {
             width: 1440px;
             @include flex (row-reverse,flex-end,flex-start);
             height: 54px;
             padding: 30px 25px 30px 25px;
         }
     }
-    ul{ 
+    ul { 
         padding : 0;
         margin : 0;
         list-style-type: none;
-        @media (min-width: 1024px) {
+        @media (min-width: $breakpoint) {
             @include flex (row);
             gap : 10px;
         }
     }
     li {
         margin-bottom: 2vh;
-        @media (min-width: 1024px) {
+        @media (min-width: $breakpoint) {
             margin-bottom: 0;
             width: 200px;
         }
@@ -337,9 +337,8 @@ main {
     .fa-solid {
         width: 11px;
         padding-right: 2vw;
-        @media (min-width: 1024px) {
+        @media (min-width: $breakpoint) {
         padding-right : 11px;
         }   
-    }
-    
+    }   
 }

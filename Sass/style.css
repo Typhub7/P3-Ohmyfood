@@ -45,7 +45,7 @@ a:link {
   position: absolute;
   z-index: 10;
   background: linear-gradient(145deg, #FF79DA 0%, #9356DC 100%);
-  font-size: 48px;
+  font-size: 3rem;
   font-family: "Shrikhand", sans-serif;
   animation: disappear 0.3s linear 2.7s forwards;
 }
@@ -130,37 +130,37 @@ a:link {
 }
 @keyframes bounce {
   0% {
-    transform: translateY(0) scaleY(50%) scaleX(110%);
+    transform: translateY(0) scaleY(0.5) scaleX(1.1);
   }
   10% {
-    transform: translateY(-80px) scaleY(185%) scaleX(50%);
+    transform: translateY(-80px) scaleY(1.85) scaleX(0.5);
   }
   20% {
-    transform: translateY(0) scaleY(60%) scaleX(110%);
+    transform: translateY(0) scaleY(0.6) scaleX(1.1);
   }
   30% {
-    transform: translateY(-55px) scaleY(165%) scaleX(62%);
+    transform: translateY(-55px) scaleY(1.65) scaleX(0.62);
   }
   40% {
-    transform: translateY(0) scaleY(70%) scaleX(108%);
+    transform: translateY(0) scaleY(0.7) scaleX(1.08);
   }
   50% {
-    transform: translateY(-30px) scaleY(150%) scaleX(85%);
+    transform: translateY(-30px) scaleY(1.5) scaleX(0.85);
   }
   60% {
-    transform: translateY(0) scaleY(85%) scaleX(105%);
+    transform: translateY(0) scaleY(0.85) scaleX(1.05);
   }
   70% {
-    transform: translateY(-20px) scaleY(130%) scaleX(93%);
+    transform: translateY(-20px) scaleY(1.3) scaleX(0.93);
   }
   80% {
-    transform: translateY(0) scaleY(95%) scaleX(103%);
+    transform: translateY(0) scaleY(0.95) scaleX(1.03);
   }
   70% {
-    transform: translateY(-5px) scaleY(115%) scaleX(97%);
+    transform: translateY(-5px) scaleY(1.15) scaleX(0.97);
   }
-  80% {
-    transform: translateY(0) scaleY(100%) scaleX(100%);
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
   }
 }
 @keyframes toolate {
@@ -469,7 +469,7 @@ main {
   left: 86%;
   width: 24px;
   height: 23px;
-  font-size: 22px;
+  font-size: 1.375rem;
   z-index: 5;
 }
 .restaurant__heart .hide-checkbox {
@@ -483,7 +483,7 @@ main {
   top: 5px;
 }
 .restaurant__heart .heart-full {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: transparent;
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
@@ -491,13 +491,13 @@ main {
   overflow: hidden;
   cursor: pointer;
   opacity: 0;
-  scale: 0.1;
+  transform: scale(0.1);
   transition: all 0.3s ease-in-out;
 }
 .restaurant__heart .heart-empty {
   color: black;
   opacity: 1;
-  scale: 1;
+  transform: scale(1);
   transition: all 0.3s ease-in-out;
 }
 .restaurant__heart #heart-checkbox-1:checked ~ .heart-label .heart-full,
@@ -505,28 +505,28 @@ main {
 .restaurant__heart #heart-checkbox-3:checked ~ .heart-label .heart-full,
 .restaurant__heart #heart-checkbox-4:checked ~ .heart-label .heart-full {
   opacity: 1;
-  scale: 1;
+  transform: scale(1);
 }
 .restaurant__heart #heart-checkbox-1:checked ~ .heart-label .heart-empty,
 .restaurant__heart #heart-checkbox-2:checked ~ .heart-label .heart-empty,
 .restaurant__heart #heart-checkbox-3:checked ~ .heart-label .heart-empty,
 .restaurant__heart #heart-checkbox-4:checked ~ .heart-label .heart-empty {
   opacity: 0;
-  scale: 0.1;
+  transform: scale(0.1);
 }
 .restaurant__heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-full,
 .restaurant__heart #heart-checkbox-2:not(:checked) ~ .heart-label .heart-full,
 .restaurant__heart #heart-checkbox-3:not(:checked) ~ .heart-label .heart-full,
 .restaurant__heart #heart-checkbox-4:not(:checked) ~ .heart-label .heart-full {
   opacity: 0;
-  scale: 0.1;
+  transform: scale(0.1);
 }
 .restaurant__heart #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty,
 .restaurant__heart #heart-checkbox-2:not(:checked) ~ .heart-label .heart-empty,
 .restaurant__heart #heart-checkbox-3:not(:checked) ~ .heart-label .heart-empty,
 .restaurant__heart #heart-checkbox-4:not(:checked) ~ .heart-label .heart-empty {
   opacity: 1;
-  scale: 1;
+  transform: scale(1);
 }
 
 .footer {
@@ -657,7 +657,7 @@ main img {
   height: 27px;
 }
 .menu__title-h1 {
-  font-size: 28px;
+  font-size: 1.8rem;
   font-weight: 400;
 }
 .menu__title-heart {
@@ -666,7 +666,7 @@ main img {
   left: 91%;
   width: 24px;
   height: 23px;
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 @media (min-width: 1024px) {
   .menu__title-heart {
@@ -685,38 +685,38 @@ main img {
   top: 5px;
 }
 .menu__title .heart-full {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: transparent;
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   background-clip: text;
   overflow: hidden;
   opacity: 0;
-  scale: 0.1;
+  transform: scale(0.1);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 .menu__title .heart-empty {
   color: black;
   opacity: 1;
-  scale: 1;
+  transform: scale(1);
   transition: all 0.3s ease-in-out;
 }
 .menu__title #heart-checkbox-1:checked ~ .heart-label .heart-full {
   opacity: 1;
-  scale: 1;
+  transform: scale(1);
 }
 .menu__title #heart-checkbox-1:checked ~ .heart-label .heart-empty {
   opacity: 0;
-  scale: 0.1;
+  transform: scale(0.1);
 }
 .menu__title #heart-checkbox-1:not(:checked) ~ .heart-label .heart-full {
   opacity: 0;
-  scale: 0.1;
+  transform: scale(0.1);
 }
 .menu__title #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty {
   opacity: 1;
-  scale: 1;
+  transform: scale(1);
 }
 .menu__starter, .menu__dish, .menu__dessert {
   display: flex;
@@ -781,7 +781,7 @@ main img {
   overflow: hidden;
 }
 .menu .card__p {
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: 300;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -798,7 +798,7 @@ main img {
   align-items: flex-end;
   justify-content: flex-end;
   flex-wrap: nowrap;
-  font-size: 15px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -830,13 +830,13 @@ main img {
   justify-content: center;
   flex-wrap: nowrap;
   color: white;
-  font-size: 0px;
+  font-size: 0;
   height: 72px;
   opacity: 0;
 }
 .menu .card .hide-checkbox:checked ~ .green-back .fa-regular {
   opacity: 1;
-  font-size: 24px;
+  font-size: 1.5rem;
   transition: opacity 0.2s ease-in-out 0.2s;
   transition: font-size 0.2s ease-in-out 0.2s;
 }
