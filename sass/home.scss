@@ -2,15 +2,15 @@ body {
     font-family: 'Roboto', sans-serif;
     margin : auto;
     width: 100vw;
-    overflow: hidden;
-    animation : appear 3.1s linear forwards;
+    //overflow: hidden;
+    //animation : appear 3.1s linear forwards;
 }
 
-@keyframes appear {
-    100% {
-        overflow: visible;
-    }
-}
+//@keyframes appear {
+//    100% {
+//        overflow: visible;
+//    }
+//}
 
 .mainheader {
     @include flex (column,center,space-between);

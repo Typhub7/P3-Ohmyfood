@@ -42,7 +42,9 @@ a:link {
   flex-wrap: nowrap;
   width: 100vw;
   height: 105vh;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 10;
   background: linear-gradient(145deg, #FF79DA 0%, #9356DC 100%);
   font-size: 3rem;
@@ -181,15 +183,8 @@ body {
   font-family: "Roboto", sans-serif;
   margin: auto;
   width: 100vw;
-  overflow: hidden;
-  animation: appear 3.1s linear forwards;
 }
 
-@keyframes appear {
-  100% {
-    overflow: visible;
-  }
-}
 .mainheader {
   display: flex;
   flex-direction: column;

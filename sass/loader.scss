@@ -2,7 +2,9 @@
     @include flex (row,center,center);
     width: 100vw;
     height: 105vh;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 10;
     background: linear-gradient(145deg, $pink-color 0%, $purple-color 100%);
     font-size: 3rem;
