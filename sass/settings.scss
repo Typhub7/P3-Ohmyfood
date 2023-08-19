@@ -5,11 +5,11 @@ $light-blue-color: #89C8FA;
 $dark-blue-color: #003A68;
 $light-green-color: #99e2d0;
 $dark-green-color: #008766;
-$white-text : white;
+$white-text: white;
 $light-grey: #F6F6F6;                   
 $medium-grey: #EAEAEA;
-$grey-footer : lighten(black, 20.8%);   
-$grey-fasolid : lighten(black,49.6%);
+$grey-footer: lighten(black, 20.8%);   
+$grey-fasolid: lighten(black,49.6%);
 
 // breakpoint 
 $breakpoint: 1024px;
@@ -39,6 +39,11 @@ p {
     font-size: 1rem;
 }
 
+// reset some default
+body {
+    margin: 0;
+}
+
 a:link {
     text-decoration: none;
 }
@@ -46,9 +51,17 @@ a:link {
 ::placeholder {
     opacity: 1; 
 }
+.heart-label {
+    cursor: pointer;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
 
 // mixin 
-
 @mixin flex(
   $flex-direction: row,
   $align-items: stretch,
