@@ -17,7 +17,10 @@
         margin: auto;
         height: 36px;
         max-width: 45%;
-        object-fit: contain;
+        object-fit: cover;
+    }
+    @media (min-width: $breakpoint) {
+        height: 96px;
     }
 }
 
@@ -30,7 +33,7 @@ main {
 }
 .menu {
     position: relative;
-    top : -50px;
+    top: -50px;
     width: 90%;
     max-width: 1055px;
     padding: 36px 5% 40px 5%;
@@ -73,7 +76,6 @@ main {
             background-clip :text;
             overflow: hidden;
             @include Opacity-and-Scale (0,0.1);
-            cursor: pointer;
             transition: all 0.3s ease-in-out;                  
         }
         .heart-empty {
@@ -105,11 +107,11 @@ main {
     .card__h4 {
         font-weight: 300;
         position: relative;
-        margin-bottom : 5px;
+        margin-bottom: 5px;
         &::before {
             content: "";
             position: absolute;
-            bottom : -7px;
+            bottom: -7px;
             left: 0;
             width: 40px;
             height: 3px;
@@ -173,14 +175,14 @@ main {
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-            width: 10% ;
+            width: 10%;
         }
         
         .hide-checkbox {
             position: absolute;
             left: 0;
             top: 0;
-            width: 90vw;
+            width: 100%;
             height: 72px;
             border-radius: 15px;
             opacity: 0;
@@ -190,14 +192,14 @@ main {
             position: absolute;
             right: 0;
             top: 0;
-            width : 0;
-            height : 72px;
+            width: 0;
+            height: 72px;
             background-color: $light-green-color;
             border-radius: 0 15px 15px 0;
         }
         .fa-regular {
             @include flex(row,center,center);
-            color : white;
+            color: white;
             font-size: 0;
             height: 72px;
             opacity: 0;
@@ -206,27 +208,27 @@ main {
         .hide-checkbox:checked ~ .green-back .fa-regular {
             opacity: 1;
             font-size: 1.5rem;
-            transition: opacity 0.2s ease-in-out 0.2s;
-            transition: font-size 0.2s ease-in-out 0.2s;                  
+            transition: opacity 0.2s linear 0.25s;
+            transition: font-size 0.2s linear 0.25s;                  
         }
 
         .hide-checkbox:checked ~ .green-back {
             width: 20%;
             min-width: 60px;
-            transition: width 0.2s ease-in-out;
+            transition: width 0.2s linear;
             }
 
         .hide-checkbox:not(:checked) ~ .green-back {
             width: 0; 
-            transition: width 0.2s ease-in-out;
+            transition: width 0.2s linear;
         }
         .hide-checkbox:checked ~ .card__width {
             width: 80%; 
-            transition: width 0.2s ease-in-out;
+            transition: width 0.2s linear;
             }
         .hide-checkbox:not(:checked) ~ .card__width {
             width: 100%; 
-            transition: width 0.2s ease-in-out;
+            transition: width 0.2s linear;
         }                         
     }               
 
@@ -237,8 +239,8 @@ main {
         border-radius: 25px;
         height: 30px;
         width: 146px;
-        padding : 10px 20px ;
-        margin : auto;
+        padding: 10px 20px ;
+        margin: auto;
         color: $white-text;
         transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         
