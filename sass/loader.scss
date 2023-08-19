@@ -1,7 +1,7 @@
 .loader {
     @include flex (row,center,center);
     width: 100vw;
-    height: 105vh;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,7 +9,7 @@
     background: linear-gradient(145deg, $pink-color 0%, $purple-color 100%);
     font-size: 3rem;
     font-family: "Shrikhand",sans-serif;
-    animation : disappear 0.3s linear 2.7s forwards;
+    animation: disappear 0.3s linear 2.7s forwards;
 }
 .plate {
     @include flex (row,center,center);
@@ -46,13 +46,13 @@
 .my {
     z-index: 40;
     opacity: 0;
-    animation : fall 0.5s ease-out 0.5s forwards, bounce 1.2s ease-out 0.9s forwards;
+    animation: fall 0.5s ease-out 0.5s forwards, bounce 1.2s ease-out 0.9s forwards;
 }
 .food {
     z-index: 40;
     opacity: 0;
     perspective-origin: bottom right;
-    animation : toolate 0.8s ease-out 1.7s forwards;
+    animation: toolate 0.8s ease-out 1.7s forwards;
 }
 
 // Animation de disparition du loader
