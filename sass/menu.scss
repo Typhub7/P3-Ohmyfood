@@ -40,7 +40,7 @@ main {
     background-color: $light-grey;
     border-radius: 40px 40px 0 0;
     @include flex(column);
-    gap : 40px;
+    gap: 40px;
     &__title {
         font-family: "Shrikhand", sans-serif;
         height: 27px;
@@ -83,15 +83,19 @@ main {
             @include Opacity-and-Scale (1,1);
             transition: all 0.3s ease-in-out;                            
         }
+        // Animation apparition du coeur plein
         #heart-checkbox-1:checked ~ .heart-label .heart-full {
             @include Opacity-and-Scale (1,1);
         }
+        // Animation disparition du coeur vide
         #heart-checkbox-1:checked ~ .heart-label .heart-empty  {
             @include Opacity-and-Scale (0,0.1);
         }
+        // Animation disparition du coeur plein
         #heart-checkbox-1:not(:checked) ~ .heart-label .heart-full {
             @include Opacity-and-Scale (0,0.1);
         }
+        // Animation apparition du coeur vide
         #heart-checkbox-1:not(:checked) ~ .heart-label .heart-empty {
             @include Opacity-and-Scale (1,1);
         }     
@@ -128,17 +132,22 @@ main {
         opacity: 0;
         animation: fadeIn 0.6s ease-in-out forwards;
 
+        // Animation apparition des 1eres lignes de menu 
         &:nth-of-type(1) {
             animation-delay: 0.2s;
         }
         
+        // Animation apparition des 2emes lignes de menu 
         &:nth-of-type(2) {
             animation-delay: 0.4s;
         }
         
+        // Animation apparition des 3emes lignes de menu 
         &:nth-of-type(3) {
             animation-delay: 0.6s;
         }
+
+        // Animation apparition des 4emes lignes de menu 
         &:nth-of-type(4) {
             animation-delay: 0.8s;
         }
@@ -205,6 +214,7 @@ main {
             opacity: 0;
         }
         
+        // Animation apparition de la coche validée sur le fond vert
         .hide-checkbox:checked ~ .green-back .fa-regular {
             opacity: 1;
             font-size: 1.5rem;
@@ -212,20 +222,24 @@ main {
             transition: font-size 0.2s linear 0.25s;                  
         }
 
+        // Animation aggrandissement du fond vert
         .hide-checkbox:checked ~ .green-back {
             width: 20%;
             min-width: 60px;
             transition: width 0.2s linear;
             }
-
+        
+        // Animation réduction du fond vert
         .hide-checkbox:not(:checked) ~ .green-back {
             width: 0; 
             transition: width 0.2s linear;
         }
+        // Animation reduction de la ligne de menu avec tarif 
         .hide-checkbox:checked ~ .card__width {
             width: 80%; 
             transition: width 0.2s linear;
             }
+        // Animation aggrandissement de la ligne de menu avec tarif 
         .hide-checkbox:not(:checked) ~ .card__width {
             width: 100%; 
             transition: width 0.2s linear;
@@ -244,10 +258,12 @@ main {
         color: $white-text;
         transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         
+        // Animation du bouton eclaircissement background et assombrissement bordure        
         &:hover, &:active {
             background: linear-gradient(175deg, lighten(#FF79DA,3%) 0%, lighten(#9356DC,3%) 100%); 
             box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.4);    
         }
+        // Animation du bouton assombrissement background et eclaircissement bordure
         &:not(:hover):not(:active) {
             background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);

@@ -176,7 +176,7 @@ main {
     &__card {
         @include flex (column); 
         width: 90vw; 
-        max-width: 910px; 
+        max-width: 650px; 
         height: 251px;
         overflow: hidden;
         position: relative;
