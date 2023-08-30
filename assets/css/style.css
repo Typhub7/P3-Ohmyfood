@@ -22,11 +22,6 @@ p {
   font-size: 1rem;
 }
 
-body {
-  margin: 0;
-  box-sizing: border-box;
-}
-
 a:link {
   text-decoration: none;
 }
@@ -206,6 +201,8 @@ span {
 body {
   font-family: "Roboto", sans-serif;
   width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .mainheader {
