@@ -251,7 +251,6 @@ main {
         background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
         -webkit-background-clip: text;
         background-clip: text ;
-        overflow: hidden;
         @include Opacity-and-Scale (0,0.1);
         transition: all 0.3s ease-in-out;                  
     }
